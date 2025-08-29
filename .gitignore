@@ -1,0 +1,4 @@
+**/slugify/
+*.json
+**/node_modules/
+*.exe
