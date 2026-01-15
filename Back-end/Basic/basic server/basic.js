@@ -8,7 +8,7 @@
 // const { contentType } = require("express/lib/response");
 // ctrl + c
 console.log("Hello, World!");
-console.log("Commit change");
+console.log("Commit change"); 
 
 
 // # SERVER USING REQUIRE, REMOVE L5 OF PACKAGE.JSON
@@ -29,14 +29,14 @@ console.log("Below bye");
 //TO work click on http://127.0.0.1:3000/ with {{{ctrl + clk}}} 
 
 // # SERVER USING MODULE, ADD L5 OF PACKAGE.JSON (  "type":"module",  )
-import http from "http"
-const hostname = '127.0.0.1';
-const port = 3000;
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/HTML');
-  res.end('<h1> Hello World. Do you cophhhhhy</h1>');
-});
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+// import http from "http"
+// const hostname = '127.0.0.1';
+// const port = 3000;
+// const server = createServer((req, res) => {
+//   res.statusCode = 200;
+//   res.setHeader('Content-Type', 'text/HTML');
+//   res.end('<h1> Hello World. Do you cophhhhhy</h1>');
+// });
+// server.listen(port, hostname, () => {
+//   console.log(`Server running at http://${hostname}:${port}/`);
+// }); 

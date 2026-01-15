@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .box {
+            /* margin-top: 10px; */
+            width: 50px;
+            height: 40px;
+            font-size: 20px;
+            background-color: #96d3ec;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 40px;
+            color: rgb(158, 0, 244);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .box:hover {
+            transform: scale(1.1);
+            background-color: #45a049;
+        }
+
+        #btn{
+            margin-top: 20px;
+        }
+        .cont{
+            border: 2px solid white;
+            margin-top: 20px;
+        }
+        .cont .box1 .box2 .box3{
+            height: 50px;
+            width: 10vw;
+        }
+ 
+        </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box blue">box 3</div>
+        <div class="box">box 4</div>
+        <div class="box blue">box 5</div>
+    </div>
+    <div class="nav">
+        <div class="menu">
+            <button>Press me</button>
+        </div>
+        <div class="menu">
+            <button>Touch Me</button>
+        </div>
+        <div class="menu">
+            <button>Double Click Me</button>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="box">Hello</div>
+        <button class="but" id="btn">Change</button>
+        <button class="but2"  id="btn2">Change</button>
+    </div>
+
+    <div class="cont">
+        <div class="box1">
+            <button id="boxa">Box A
+            </button>
+        <div class="box2"><button id="boxb">BOX B</button>
+        <div class="box3"><button id="boxc">BOX C</button></div>
+        </div>
+        </div>
+    </div>
+
+    
+
+<!-- <script src="dom.js"></script> -->
+<!-- <script src="dom_with_event.js"> -->
+    <!-- <script src="callBack_promises.js"></script> -->
+     <!-- <script src="async_await.js"></script> -->
+      <!-- <script src="Error_handling.js"></script> -->
+       <script src="iife.js"></script>
+</script>
+</body>
+</html>
