@@ -1,25 +1,21 @@
-//SELECTING elements using JavaScript
-// Using JavaScript to manipulate the DOM
-
-// document.title = "JavaScript DOM Manipulation";
-// document.body.style.backgroundColor = "black";   
+// Title: Manipolating via DOM
+// For more read here ---
 
 
-// let aba = document.getElementsByClassName("box");
+let aba = document.getElementsByClassName("box");
+console.log(aba);
+
+aba[3].style.backgroundColor = "red";
+
+document.getElementById("idbox").style.backgroundColor="pink";
 // console.log(aba);
+// document.querySelector(".box").style.backgroundColor="red"
 
-// aba[3].style.backgroundColor = "red";
-
-// let vvh = document.getElementsByClassName("box");
-// vvh[1].style.backgroundColor="white";
-
-// console.log(aba);
-
-// document.querySelectorAll(".box").forEach(e=>{
-//     e.style.backgroundColor = "blue";
-//     // No need to use e[3] here; 'e' is already a single element
-//     e.matches(".box")? console.log("This is a box") : console.log("This is not a box");
-// })
+document.querySelectorAll(".box").forEach(e=>{
+    e.style.backgroundColor = "blue";
+    // No need to use e[3] here; 'e' is already a single element
+    e.matches(".box")? console.log("This is a box") : console.log("This is not a box");
+})
 
 
 
@@ -31,9 +27,9 @@
 // // document.querySelectorAll(".box").forEach(e=>{
 // //         e.innerHTML="hello"
 // // })
-document.querySelectorAll(".box").forEach(e=>{
-    e.setAttribute("style","margin-top:20px")
-})
+// document.querySelectorAll(".box").forEach(e=>{
+//     e.setAttribute("style","margin-top:20px")
+// })
 // document.querySelector(".container").removeChild(document.querySelector(".box"));
 // document.querySelector(".container").remove();
 

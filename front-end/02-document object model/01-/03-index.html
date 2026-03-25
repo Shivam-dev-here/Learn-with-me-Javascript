@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        /* background-color: #000000; */
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      .box {
+        /* margin-top: 10px; */
+        width: 50px;
+        margin: 30px;
+        height: 40px;
+        font-size: 20px;
+        background-color: #96d3ec;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 40px;
+        color: rgb(158, 0, 244);
+        transition:
+          transform 0.3s ease,
+          background-color 0.3s ease;
+      }
+      .box:hover {
+        transform: scale(1.1);
+        background-color: #45a049;
+      }
+
+      #btn {
+        margin-top: 20px;
+      }
+      .cont {
+        border: 2px solid white;
+        margin-top: 20px;
+      }
+      .cont .box1 .box2 .box3 {
+        height: 50px;
+        width: 10vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">box 1</div>
+      <div id="idbox" class="box">box 2</div>
+      <div class="box blue">box 3</div>
+      <div class="box">box 4</div>
+      <div class="box blue">box 5</div>
+    </div>
+
+    <script src="03-main.js"></script>
+  </body>
+</html>

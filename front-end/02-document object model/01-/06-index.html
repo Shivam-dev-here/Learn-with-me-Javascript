@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            background: #55e48c;
+            padding: 10px;
+            margin: 10px;
+            border: 2px, solid rgb(2, 116, 48);
+        }
+        .childcontainer{
+            background: #f1ad6d;
+            padding: 10px;
+            margin: 10px;
+            border: 2px, solid rgb(255, 217, 0);
+        }
+        .container{
+            background: #de331c;
+            padding: 10px;
+            margin: 10px;
+            border: 2px, solid rgba(255, 12, 8, 0.497);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">I am a child</div>
+        </div>
+    </div>
+    <button id="btn">I am a seperator</button>
+    <button id="btn2">I'm <b>b</b> button</button>
+    <script>
+        document.querySelector(".container").addEventListener("click", (e)=>{
+            e.stopPropagation()
+            console.log("grandparent yeeeeeeee");
+        })
+        document.querySelector(".childcontainer").addEventListener("click", (e)=>{
+            e.stopPropagation()
+            console.log("parent yeeeeeeee");
+        })
+        document.querySelector(".child").addEventListener("click", (e)=>{
+            e.stopPropagation()
+            console.log("child yeeeeeeee");
+        })
+
+        document.getElementById("btn").addEventListener("click", ()=>{
+            console.log("----------------------");
+        })
+
+        function randomColorGenerator(){
+            let val1 = Math.ceil(0 + Math.random() * 255)
+            let val2 = Math.ceil(0 + Math.random() * 255)
+            let val3 = Math.ceil(0 + Math.random() * 255)
+            return `rgb(${val1},${val2},${val3})`
+        }
+
+        // document.querySelector("#btn").style.
+
+        // let x = setInterval(()=>{
+        //     document.querySelector("#btn").style.background = randomColorGenerator()
+        // },1000)
+        // console.log(x);
+        
+        let y = setTimeout(()=>{
+            document.querySelector("#btn2").style.background = randomColorGenerator()
+        },5000)
+        console.log(y);
+        
+    
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

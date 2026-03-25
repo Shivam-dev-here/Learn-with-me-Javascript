@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 //serves bootstrap file 3   NEW {closed}
 // app.get('/', (req, res) => {
-//   res.render('index')           
+//   res.sendFile('index')           
 // })
 
 // using slug + console via params 6

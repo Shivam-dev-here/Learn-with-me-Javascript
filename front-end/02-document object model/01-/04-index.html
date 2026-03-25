@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .created{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" >Hey i am a box.</div>
+        <div class="box" data-createdby:"meee" style="display: flex;">Hey i am a box.</div>
+    </div>
+    <script>
+        let newSpan = document.createElement("span")
+        newSpan.innerHTML = "Hey i am inner"
+        newSpan.setAttribute("class", "created")
+        document.querySelector(".container").before(newSpan)
+
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterend", "hwy bro, <b> I ahave been deketed yeeeeeeeee </b>")
+    </script>
+</body>
+</html>
