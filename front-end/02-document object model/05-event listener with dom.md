@@ -3,7 +3,8 @@
 - dependent on file: yes
 - Other: Video no: 74
 ```
-05-index.html
+05-a-index.html
+05-b-index.html
 05-event with dom.md
 ```
 
@@ -39,7 +40,7 @@ document.addEventListener("keydown", (e)=>{
 
 
 - ##  ==#== Event Bubbling
-	- **File: 06-index.html**
+	- **File: 05-b-index.html**
 	- definition: adding a event listener to child and it's parent and firring event from child propagates through parents listener. 
 	- Example:
 		1. Containers are:  Me, Room,  Building, India, Asia, etc.
@@ -53,7 +54,7 @@ e.stopPrpagation()
 ```
 
 ##  ==#== Set Intervals
-- File: 06-index.html
+- File: 05-b-index.html
 - Use: want to repeat a event after a set interval of time.
 - Example: a random color to a box
 ```
@@ -66,7 +67,7 @@ console.log(x)
 
 ##  ==#== Set timeout
 - File: 06-index.html
-- Use: want to happen a event after a time.
+- Use: want to happen a event after a time only once.
 - Example: b random color to a box
 ```
 let y = setInterval(()=>{
@@ -74,11 +75,11 @@ let y = setInterval(()=>{
 },1000)
 console.log(y)
 ```
-- To stop it: use function cleartimout(y). y is obtained in console.log
+- To stop it: use function cleartimeout(y) within time range. y is obtained in console.log
 
 
 ## Other
 
 ```
-
+function randomColorGenerator() E in File: 05-b-index.html
 ```
