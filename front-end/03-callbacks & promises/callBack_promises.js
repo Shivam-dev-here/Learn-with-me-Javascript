@@ -66,16 +66,16 @@ let prom2 = new Promise((resolve, reject) => {
   }
 });
 // Promise API method
-let prom3 = Promise.allSettled([prom1, prom2]);
-// let prom3 = Promise.race([prom1, prom2]);
-// let prom3 = Promise.all([prom1, prom2]);
-prom3.then((a) => {
-    // console.log("All promises resolved");
-    console.log(a);
-}).catch(err=> {
-    // console.log("One or more promises rejected");
-    console.log(err);
-});
+// let prom3 = Promise.allSettled([prom1, prom2]);  // any one resolves
+// let prom3 = Promise.race([prom1, prom2]);      //fastest first
+// let prom3 = Promise.all([prom1, prom2]);          // only when both resolved
+// prom3.then((a) => {
+//     // console.log("All promises resolved");
+//     console.log(a);
+// }).catch(err=> {
+//     // console.log("One or more promises rejected");
+//     console.log(err);
+// });
 
 // let prom3 = new Promise((resolve, reject) => {
 //   if (0.5 > Math.random()) {
