@@ -56,4 +56,4 @@ with await we get a resolved promise's Data (want)
 - Get Req : accessing a website
 - Post Req : Submitting a form
 - Put : Update
-- Delete 
+- Delete : remove
