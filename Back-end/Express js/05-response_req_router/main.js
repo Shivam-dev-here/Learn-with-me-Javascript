@@ -1,8 +1,3 @@
-// Express js > Getting started > Hello world
-// npm init -y
-// npm i express
-// nodemon server.js
-
 // # EXPLAINED POSTMAN
 
 
