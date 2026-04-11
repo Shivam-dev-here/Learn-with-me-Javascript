@@ -56,33 +56,3 @@ app.listen(port, () => {
 
 5.  Run on localhost:3000/mypage.html            file name
 
-#### PUT Request 
-
-1. Repeat Every steps of post request
-2. `{method: "PUT"}`
-3.  
-```
-app.put('/', (req, res) => { 
-  console.log("Hello PUT");
-  res.send('Hello, I am PUT req')
-})
-```
-
-4. Run on localhost:3000/mypage.html 
----
-
-## Chaining of Request
-
-- adding next to earlier last, works same, different look
-
-```
-app.get('/', (req, res) => {
-  console.log("It is a get request")
-  res.send('Hello World!')
-}).post('/', (req, res) => {
-  console.log("Hello post");
-  res.send('Hello, I am post req')
-}).listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
-```
