@@ -133,3 +133,11 @@ app.listen(port, () => {
 ```
 
 ---
+- ##### Modification in headers
+
+```
+app.use((req, res, next) => {
+  req.harry = " i am being added in request"
+  next()               
+})
+```
