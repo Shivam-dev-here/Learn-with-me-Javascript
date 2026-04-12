@@ -175,4 +175,15 @@ app.get("/api",(req, res) => {              
 	6. Change post home `GET` -> `POST` + Send
 	7. Outputs: `Hello World! post`
 
+- testing different api request
+	1. Duplicate "post home" 
+	2. Rename to "api home"
+	3. Enter http://http://localhost:3000/api + GET Request + Send
+	4. Output --> json : `{a:1, b:3, name:["meme", "King"]}`
+	
+
+- Share
+	1.  Go to Collection
+	2. Three dot
+	3. export
 ---
