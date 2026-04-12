@@ -45,10 +45,23 @@ app.listen(port, () => {
 // Middleware 1
 app.use((req, res, next) => {
 	console.log('m1')
+	next()
 })
 
 // Middleware 2
 app.use((req, res, next) => {
 	console.log('m2')
+	next()
 })
+
+// after running localhost:3000
+// cl = m1
+// cl = m2
 ```
+
+- if `next()` of m1 ∄, server freezes. can't pass to next request.
+
+- if `res.send("midleware 1")` ∃ in m1, endpoint
+
+---
+
