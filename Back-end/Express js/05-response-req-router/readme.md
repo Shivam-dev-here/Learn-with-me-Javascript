@@ -147,3 +147,9 @@ app.get("/api",(req, res) => {              
 
 //Go to /api
 ```
+
+---
+# ===PART 3== : Postman
+
+- Download : Postman [click me](https://www.postman.com/downloads/)
+- Use : to create api, request easily.
