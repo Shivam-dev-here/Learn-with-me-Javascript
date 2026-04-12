@@ -65,3 +65,37 @@ app.use((req, res, next) => {
 
 ---
 
+## Why middleware?
+
+- modifies request, response, pass or stop
+
+- ##### Using file system
+
+```
+const express = require('express')
+const app = express()
+const port = 3000
+
+const fs = require("fs")
+
+app.use((req, res, next) => {
+	fs.appendFileSync("log.txt",` ${Date.now()} is a ${req.method} \n`) 
+	console.log("LOGGED");
+	req.harry = " i am being added in request"
+	next()                              
+})
+
+app.get('/', (req, res) => {
+	res.send('Hello World!')
+}).get('/about', (req, res) => {
+	res.send('Hello about')    
+	console.log(req.harry);
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+```
+
+---
+
