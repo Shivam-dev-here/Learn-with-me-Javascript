@@ -116,3 +116,21 @@ Root
 ```
 
 ---
+## Sending html file 
+
+- `sendFile()`  is used to send file
+- `res.send()` is used to send text
+- `{root: __dirname}` is used to specify root to from `templates/index.html` else error
+
+
+```
+app.get("/index",(req, res) => {              
+  console.log("INDEX: I Am");
+  // res.send('Hello, I am index')         //for some line
+  res.sendFile('templates/index.html', {root: __dirname}) 
+})
+
+//Go to /index
+```
+
+---
