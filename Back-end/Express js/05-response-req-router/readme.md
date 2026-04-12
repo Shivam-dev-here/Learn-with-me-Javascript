@@ -1,5 +1,18 @@
 - 
 ---
+# ===PART 1== : Understanding GET, POST, PUT Request
+
+```
+Root
+│
+├── public/
+│   └── mypage.html
+|
+├── main.js
+└── README.md
+```
+
+---
 #### Get Request 
 
 ```
@@ -16,7 +29,7 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 ```
-## ==Checking Post Request== : NGP
+## Post Request : NGP
 
 1. Create a public folder 
 2. inside it mypage.html with a function, let file name be x1a
@@ -82,7 +95,24 @@ app.get('/', (req, res) => {
 }).post('/', (req, res) => {
   console.log("Hello post");
   res.send('Hello, I am post req')
-}).listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+}).put('/', (req, res) => {
+  console.log("Hello put");
+  res.send('Hello, I am put req')
 })
+
 ```
+
+---
+# ===PART 2== : Understanding GET, POST, PUT Request
+
+```
+Root
+│
+├── templates/
+│   └── index.html
+|
+├── main.js
+└── README.md
+```
+
+---
