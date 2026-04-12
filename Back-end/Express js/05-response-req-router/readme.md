@@ -153,3 +153,16 @@ app.get("/api",(req, res) => {              
 
 - Download : Postman [click me](https://www.postman.com/downloads/)
 - Use : to create api, request easily.
+
+- Steps To initialize and test a api
+	1. Create a workshop
+	2. Blank Workspace
+	3. Select Team
+	4. Go to Workspace
+	5. New 
+	6. Http
+	7. Go to main.js and run a server 
+	8. Enter http://http://localhost:3000/ + GET Request + Send
+	9. Outputs: `res.send("Hello World!")  => Hello 
+	10. Save
+
