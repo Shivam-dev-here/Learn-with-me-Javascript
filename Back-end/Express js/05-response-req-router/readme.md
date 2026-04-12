@@ -166,3 +166,13 @@ app.get("/api",(req, res) => {              
 	9. Outputs: `res.send("Hello World!")  => Hello 
 	10. Save
 
+- Create a Collection
+	1. Save as
+	2. Name "Home"
+	3. Save
+	4. Now able to change name "get Home"
+	5. Duplicate and rename as "post home"
+	6. Change post home `GET` -> `POST` + Send
+	7. Outputs: `Hello World! post`
+
+---
