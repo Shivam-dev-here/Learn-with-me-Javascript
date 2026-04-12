@@ -141,3 +141,21 @@ app.use((req, res, next) => {
   next()               
 })
 ```
+
+---
+
+- ##### Passing header to different request
+
+```
+app.use((req, res, next) => {
+  req.harry = " i am being added in request"
+  next()               
+})
+
+app.use((req, res, next) => {
+  req.harry ="now i  am changed req"
+  next()                              
+})
+```
+
+---
