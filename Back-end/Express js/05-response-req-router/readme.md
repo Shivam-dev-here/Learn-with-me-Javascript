@@ -134,3 +134,9 @@ app.get("/index",(req, res) => {              
 ```
 
 ---
+## Response Methods
+
+<img src="assets/response-methods.png" width="640" alt="">
+
+---
+
