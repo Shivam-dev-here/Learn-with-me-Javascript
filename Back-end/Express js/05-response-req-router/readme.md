@@ -187,3 +187,39 @@ app.get("/api",(req, res) => {              
 	2. Three dot
 	3. export
 ---
+
+# ===PART 4== : Express Router
+
+- Use: helps to organize api & another way to request them
+- Aim: 
+	1. instead of writing all at one place
+	2. we divide it in sections for easy management, etc
+
+```
+Root
+│
+├── routes/
+│   └── blog.js
+│   └── shop.js
+|
+├── main.js
+└── README.md
+```
+
+1. main.js
+
+```
+const blogs = require('./routes/blogs')
+const shops = require('./routes/shops')
+```
+
+2. routes/blog.js
+
+	- app request under this routes will specifically includes blogs api.
+
+2. routes/shop.js
+
+	- similarly blog.js
+
+3. Example: Above file structure shows perfect example
+---
