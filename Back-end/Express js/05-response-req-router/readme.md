@@ -103,7 +103,7 @@ app.get('/', (req, res) => {
 ```
 
 ---
-# ===PART 2== : Understanding GET, POST, PUT Request
+# ===PART 2== : Serving HTML file
 
 ```
 Root
@@ -116,12 +116,11 @@ Root
 ```
 
 ---
-## Sending html file 
+## ` res.json`
 
 - `sendFile()`  is used to send file
 - `res.send()` is used to send text
 - `{root: __dirname}` is used to specify root to from `templates/index.html` else error
-
 
 ```
 app.get("/index",(req, res) => {              
@@ -139,4 +138,12 @@ app.get("/index",(req, res) => {              
 <img src="assets/response-methods.png" width="640" alt="">
 
 ---
+## `res.json`
 
+```
+app.get("/api",(req, res) => {              
+  res.json({a:1, b:2, c:3})
+})
+
+//Go to /api
+```
