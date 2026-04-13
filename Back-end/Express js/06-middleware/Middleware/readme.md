@@ -104,36 +104,14 @@ app.listen(port, () => {
 	1.   `console.log(req.headers);`
 
 ```
-const express = require('express')
-const app = express()
-const port = 3000
-
 app.use((req, res, next) => {
   console.log(req.headers);                      // cl -> all headers
-  req.harry = " i am being added in request"     //  /about  logs it
   next()               
-})
-
-app.use((req, res, next) => {
-  console.log("next midleware");
-  req.harry =" now i  am changed req"
-  next()                              
-})
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-}).get('/about', (req, res) => {
-  res.send('Hello about')    
-  console.log(req.harry);
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
 })
 ```
 
 ---
-- ##### Modification in headers
+- ##### Custom Property added
 
 ```
 app.use((req, res, next) => {
@@ -144,7 +122,7 @@ app.use((req, res, next) => {
 
 ---
 
-- ##### Passing header to different request
+- ##### Manipulating Custom Property & Passing to different request
 
 ```
 app.use((req, res, next) => {
@@ -155,6 +133,11 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   req.harry ="now i  am changed req"
   next()                              
+})
+
+app.get('/about', (req, res) => {
+  res.send('Hello about' + req.harry)    
+  console.log();
 })
 ```
 
