@@ -1,4 +1,4 @@
-- 
+
 ---
 ## Simple Middleware Example
 
@@ -142,3 +142,42 @@ app.get('/about', (req, res) => {
 ```
 
 ---
+- ## ==Router as example==
+
+   1. Structured organization
+   2. Modularity → divided into multiple files (route folders)
+
+```
+Root
+│
+├── route/
+│   └── middleware.js
+|
+├── main.js
+└── README.md
+```
+
+ - Steps to Initialize
+	
+	1. Add 'const blog = require('routes/middleware.js')' in main.js
+	2. Create a file /route/middleware.js and paste
+
+```
+const express = require('express')
+const router = express.router()
+
+router.use((req, res, next) => {
+  console.log('Time:',Date.now());
+  next()                              
+})
+
+router.get('/',(req,res)=>{
+    res.send('Home: HELLO BIRDS')
+})
+
+router.get('/about',(req,res)=>{
+    res.send('About: HELLO BIRDS')
+})
+
+module.exports = router
+```
