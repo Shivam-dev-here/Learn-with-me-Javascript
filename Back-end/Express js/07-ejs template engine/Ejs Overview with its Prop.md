@@ -1,10 +1,37 @@
----
-
----
 
 Description on ejs and its prop
 
 ---
+## Using Bootstrap
+
+- Create
+
+```
+Root
+├── template/
+│   └── index.html
+├── main.js
+└── README.md
+```
+
+- From Documentation [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) add to `/templates/index.html`
+- It is: links to use js and CSS from it via connecting to it's site 
+
+```
+<head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"></head>
+<body><h1>Hello, world!</h1><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script></body>
+```
+
+---
+#### ==Nav bar via bootstrap==
+
+
+
+
+
+
+
+
 ## Root Folder
 - views
 	1. index.ejs             (Bootstrap demo)
@@ -20,6 +47,8 @@ Description on ejs and its prop
 - Notes.md 
 
 ---
+
+
 
 #### BOOTSTRAP
  - index.html : includes css js links
