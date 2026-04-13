@@ -1,6 +1,6 @@
 
 ---
-## Simple Middleware Example
+## ==Simple Middleware Example==
 
 - Middleware = runs between request and response in a server
 
@@ -39,7 +39,7 @@ app.listen(port, () => {
 ```
 
 ---
-## Syntax
+## ==Syntax==
 
 ```
 // Middleware 1
@@ -65,7 +65,7 @@ app.use((req, res, next) => {
 
 ---
 
-## Why middleware?
+## ==Why middleware?==
 
 - modifies request, response, pass or stop
 
@@ -146,6 +146,7 @@ app.get('/about', (req, res) => {
 
    1. Structured organization
    2. Modularity → divided into multiple files (route folders)
+   3. Read more: [Using router](https://expressjs.com/en/guide/routing.html)
 
 ```
 Root
@@ -181,3 +182,8 @@ router.get('/about',(req,res)=>{
 
 module.exports = router
 ```
+
+---
+## Types of middleware
+
+- Read More [click me](https://expressjs.com/en/guide/using-middleware.html)
