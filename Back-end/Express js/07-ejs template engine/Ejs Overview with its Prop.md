@@ -1,5 +1,5 @@
 
-Description on ejs and its prop
+Description later
 
 ---
 ## Using Bootstrap
@@ -25,36 +25,20 @@ Root
 ---
 #### ==Nav bar via bootstrap==
 
-
-
-
-
-
-
-
-## Root Folder
-- views
-	1. index.ejs             (Bootstrap demo)
-	2. deleteme.ejs      (for loop links)
-- main.js                         (ejs template example)
-- deleteme.js                 (Shorthand concept)
-- Note
----
-#### Old Root Folder
-- template 
-	1. index.html          (Bootstrap demo)
-- main.js                         (ejs template example)
-- Notes.md 
+1. Go to [nav ](https://getbootstrap.com/docs/5.3/components/navbar/)
+2. Copy nav bar
+3. Paste at `templates/index.html`
+4. Run `index.js`
 
 ---
 
 
 
-#### BOOTSTRAP
- - index.html : includes css js links
-- Path : getbootstrap -->  Docs  --> copy(css,js:link)
-                 -->  Components  > Nav, btn, (copy:paste)
- 
+
+
+
+
+
 ---
 ```
 const express = require('express')
