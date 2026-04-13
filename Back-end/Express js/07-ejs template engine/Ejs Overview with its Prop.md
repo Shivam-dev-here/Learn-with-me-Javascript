@@ -42,12 +42,17 @@ app.get('/', (req, res) => {
 3. Output at : `http://localhost:3000/`
 
 ---
-## ==PART: 2== Embedded JavaScript or ejs
- - Embedded JavaScript
-    Example: Show 100 students name from server to a Html file.
-	1. Manual, type manually, if change in server = manual html file change
-    2. Ejs : connect server to Html (automatic ejs with express)
-    Teaches ejs with express [Github](https://github.com/mde/ejs/wiki/Using-EJS-with-Express)
+## ==PART: 2== Embedded JavaScript
+
+### Why Ejs
+
+ - Example: Show 100 students name from server to a Html file.
+
+   1. Manual, type manually, if change in server = manual html file change
+   2. Ejs : connect server to Html (automatic changes Ejs with express)
+### Initialize Ejs
+
+    Teaches Ejs with express [Github](https://github.com/mde/ejs/wiki/Using-EJS-with-Express)
 	3. 
  -  Basic cmd
 	 ```
