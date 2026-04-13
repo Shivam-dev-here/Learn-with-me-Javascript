@@ -29,6 +29,17 @@ Root
 2. Copy nav bar
 3. Paste at `templates/index.html`
 4. Run `index.js`
+### Passing the above file `index.html` to `main.js`
+
+```
+app.get('/', (req, res) => {
+	res.sendFile('template/index.html', {root: __dirname})          
+})
+```
+
+1. Add to `main.js`
+2. Run `main.js`
+3. Output at : `http://localhost:3000/`
 
 ---
 
