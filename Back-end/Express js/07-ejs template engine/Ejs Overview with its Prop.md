@@ -2,7 +2,7 @@
 Description later
 
 ---
-## Using Bootstrap
+## ==PART: 1== Using Bootstrap
 
 - Create
 
@@ -42,34 +42,8 @@ app.get('/', (req, res) => {
 3. Output at : `http://localhost:3000/`
 
 ---
-
-
-
-
-
-
-
-
----
-```
-const express = require('express')
-const app = express()
-const port = 3000
-
-app.get('/', (req, res) => {
-    console.log("second comment");
-  res.send('Hello World!')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-  console.log("First comment");
-})
-```
-
----
-## Initializing main.js with Ejs 
- - Embeded Javascript
+## ==PART: 2== Embedded JavaScript or ejs
+ - Embedded JavaScript
     Example: Show 100 students name from server to a Html file.
 	1. Manual, type manually, if change in server = manual html file change
     2. Ejs : connect server to Html (automatic ejs with express)
