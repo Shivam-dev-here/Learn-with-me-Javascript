@@ -72,7 +72,7 @@ app.get('/', (req, res) => {
 ```
 Root
 ├── views/
-│   └── index.ejs
+│   └── navbar.ejs
 ├── main.js
 └── README.md
 ```
@@ -93,7 +93,7 @@ app.get('/', (req, res) =>{
     let value = 34
     let arr = [2,3,4,"Hello bro"]
     // console.log(req.params.slug);
-    res.render("index", {title:title, value:value, arr})
+    res.render("navbar", {title:title, value:value, arr})
 })
 
 app.listen(port, () => {
@@ -101,8 +101,8 @@ app.listen(port, () => {
 })
 ```
 
-2. `views/index.ejs`
-	- `index.ejs` : must have
+2. `views/navbar.ejs`
+	- `navbar.ejs` : must have
 		1. code including the link of CSS & script
 		2. The actual Navbar code of "Bootstrap"
 		
@@ -124,6 +124,33 @@ app.listen(port, () => {
 <img src="assets/with-ejs.png" max-width="90%" height="auto" alt="">
 
 ==EXAMPLE 2:==  Creating List via passing array from JS to EJS
+
+```
+Root
+├── views/
+│   └── arr.ejs
+├── main.js
+└── README.md
+```
+
+1.  `main.js`: change render file 
+	`let arr = ["must be string",2,3,4,"Hello bro"]`
+	`res.render("arr", {title:title, arr})`
+	
+2. `arr.ejs`:
+	- Add : Code of `navbar.ejs`
+	- Alter: 
+```
+<ul class="dropdown-menu">Imp: 
+	<%= arr[0] %>
+	<li>
+		<a class="dropdown-item" href="#">Action</a>
+	</li>
+</ul>
+```
+
+3. Output : dropdown-menu's 1st option will be "Imp: must be string"
+
 
 
 
