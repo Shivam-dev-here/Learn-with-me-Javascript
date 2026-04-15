@@ -32,7 +32,7 @@ app.get('/', (req, res) =>{
     let value = 34 
     let arr = [2,3,4,"Hello bro"]
     // console.log(req.params.slug);
-    res.render("index", {title:title, value:value, arr})      // basic with ejs L:14, L:43
+    res.render("new", {title:title, value:value, arr})      // basic with ejs L:14, L:43
 }) 
 
 app.listen(port, () => {

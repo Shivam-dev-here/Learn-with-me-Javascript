@@ -52,16 +52,69 @@ app.get('/', (req, res) => {
    2. Ejs : connect server to Html (automatic changes Ejs with express)
 ### Initialize Ejs
 
-    Teaches Ejs with express [Github](https://github.com/mde/ejs/wiki/Using-EJS-with-Express)
-	3. 
- -  Basic cmd
-	 ```
+- `npm install ejs`
+- Learn Ejs with Express Js [Github](https://github.com/mde/ejs/wiki/Using-EJS-with-Express) (bcoz site docs = confusion)
+
+- Add `app.set('view engine', 'ejs');` to `root/main.js`
+
+ -  Basic cmd	 
+
+```
 	 npm init -y
 	 npm install ejs nodemon
-	 app.set('view engine', 'ejs');
-	 ```
-- `res.sendFile`  sends file not data, variable
-- `res.render` does
+```
+
+### Use Ejs
+```
+Root
+├── views/
+│   └── index.ejs
+├── main.js
+└── README.md
+```
+
+- `res.sendFile`  sends file but not data and variable
+- `res.render` Use: render a new file
+
+1. `main.js`
+
+```
+const express = require('express')
+const app = express()
+const port = 3000
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) =>{
+    let title = "Ejs with express blog"
+    let value = 34
+    let arr = [2,3,4,"Hello bro"]
+    // console.log(req.params.slug);
+    res.render("index", {title:title, value:value, arr})
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+```
+
+2. `views/index.ejs`
+	- `<%= foo %>` : way to pass a variable via Ejs.
+
+```
+// Change the title via <%= foo %>
+
+<a class="navbar-brand" href="#"><%= title %></a>
+```
+
+
+3. Output
+	- Earlier
+		![[Pasted image 20260415215805.png]]
+	- Now
+		![[Pasted image 20260415215646.png]]
+
+
+
 # CHANGES
 
 templates --> view (ejs uses view as folder)
