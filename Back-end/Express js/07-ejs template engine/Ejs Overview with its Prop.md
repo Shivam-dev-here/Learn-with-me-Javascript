@@ -171,38 +171,16 @@ Root
 	
 2. `views/index.ejs` must include 
 	1. code including the link of CSS & script
-	2. Add: ` <%- include('navbar');  %>` in body
+	2. Add: `<%- include('navbar');  %>` in body
 	
 3. Output: Running main.js gives navbar of bootstrap.
 
+==EXAMPLE 4:==  Overwrite a Variable
+
+- Root: Example 2
+- main.js: Example 2
+- index.ejs: 
+	1. Alter: `<%- include('navbar'); {title:"shivam-dev-here"} %>` in body
+
+
 ---
-
-
-
-
-
-
-# CHANGES
-
-templates --> view (ejs uses view as folder)
-template  --> removed from res.sendFile,rander
-index.html --> index.ejs
-
-used in index.ejs <%= foo %>  L:14, L:43
-used arr too L:24
-
-Excluding Nav bar, using ejs
-create a another file with navbar.ejs wthin views
-put <%- include('navbar');  %> in index to link with overwrite
-
-# Object Property Shorthand Concept
-
-👉 **EJS runs BEFORE the browser loads the page**  
-👉 `<script>` runs **AFTER the page is sent to the browser**
-
-- Task : 
-	- using shorthand prop to serve many links via for loop in ejs
-- Working:
-	1. pass links as obj via js
-	2. create `foo` in ejs
-	3. Run
