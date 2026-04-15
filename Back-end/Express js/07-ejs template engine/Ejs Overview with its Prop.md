@@ -50,6 +50,8 @@ app.get('/', (req, res) => {
 
    1. Manual, type manually, if change in server = manual html file change
    2. Ejs : connect server to Html (automatic changes Ejs with express)
+
+---
 ### Initialize Ejs
 
 - `npm install ejs`
@@ -65,6 +67,7 @@ app.get('/', (req, res) => {
 	 npm install ejs nodemon
 ```
 
+---
 ### Use Ejs
 
 ==EXAMPLE 1:==  Sending a text value from JS to EJS
@@ -129,6 +132,7 @@ app.listen(port, () => {
 Root
 ├── views/
 │   └── arr.ejs
+│   └── navbar.ejs
 ├── main.js
 └── README.md
 ```
@@ -151,8 +155,27 @@ Root
 
 3. Output : dropdown-menu's 1st option will be "Imp: must be string"
 
+==EXAMPLE 3:==  Getting a EJS on another EJS via JS
 
+```
+Root
+├── views/
+│   └── index.ejs
+│   └── arr.ejs
+│   └── navbar.ejs
+├── main.js
+└── README.md
+```
 
+1.  `main.js`: change render file `res.render("index", {title:title, arr})`
+	
+2. `views/index.ejs` must include 
+	1. code including the link of CSS & script
+	2. Add: ` <%- include('navbar');  %>` in body
+	
+3. Output: Running main.js gives navbar of bootstrap.
+
+---
 
 
 
