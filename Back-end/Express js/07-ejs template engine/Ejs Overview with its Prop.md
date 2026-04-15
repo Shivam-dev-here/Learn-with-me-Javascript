@@ -56,6 +56,7 @@ app.get('/', (req, res) => {
 - Learn Ejs with Express Js [Github](https://github.com/mde/ejs/wiki/Using-EJS-with-Express) (bcoz site docs = confusion)
 
 - Add `app.set('view engine', 'ejs');` to `root/main.js`
+- Add Extension of VS Code `EJS Language Support`
 
  -  Basic cmd	 
 
@@ -65,6 +66,9 @@ app.get('/', (req, res) => {
 ```
 
 ### Use Ejs
+
+==EXAMPLE 1:==  Sending a text value from JS to EJS
+
 ```
 Root
 ├── views/
@@ -118,6 +122,13 @@ app.listen(port, () => {
 	- After
 
 <img src="assets/with-ejs.png" max-width="90%" height="auto" alt="">
+
+==EXAMPLE 2:==  Creating List via passing array from JS to EJS
+
+
+
+
+
 
 
 
