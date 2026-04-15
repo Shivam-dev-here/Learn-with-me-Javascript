@@ -77,7 +77,7 @@ Root
 - `res.render` Use: render a new file
 
 1. `main.js`
-
+	
 ```
 const express = require('express')
 const app = express()
@@ -98,20 +98,26 @@ app.listen(port, () => {
 ```
 
 2. `views/index.ejs`
+	- `index.ejs` : must have
+		1. code including the link of CSS & script
+		2. The actual Navbar code of "Bootstrap"
+		
 	- `<%= foo %>` : way to pass a variable via Ejs.
-
+	
 ```
 // Change the title via <%= foo %>
 
 <a class="navbar-brand" href="#"><%= title %></a>
 ```
-
-
+	
 3. Output
 	- Earlier
-		![[Pasted image 20260415215805.png]]
-	- Now
-		![[Pasted image 20260415215646.png]]
+
+<img src="assets/without-ejs.png" max-width="90%" height="auto" alt="">
+	
+	- After
+
+<img src="assets/with-ejs.png" max-width="90%" height="auto" alt="">
 
 
 
