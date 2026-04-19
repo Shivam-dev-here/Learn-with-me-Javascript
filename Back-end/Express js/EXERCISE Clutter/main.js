@@ -1,44 +1,52 @@
-//EXERCISE 15 VID:91
-const express = require('express')
-const app = express()
-const port = 3000
+// import fs from "fs/promises"
+// import fsn from "fs"
+// import path from "path"
 
-const fs = require("fs")
+// const basepath = "EXERCISE Clutter\\waste"
 
-let my_path = "waste/menu.mp4"
-// console.log(path.extname(my_path), path.dirname(my_path), basename(my_path));
+// let files = await fs.readdir(basepath)
 
-
-
-
-
+// for (const item of files) {
+//     console.log("running for ", item)
+//     let ext = item.split(".")[item.split(".").length - 1]
+//     if (ext != "js" && ext != "json" && item.split(".").length > 1) {
 
 
+//         if (fsn.existsSync(path.join(basepath, ext))) {
+//             // Move the file to this directory if its not a js or json file
+//             fs.rename(path.join(basepath, item), path.join(basepath, ext, item))
+//         }
+//         else {
+//             fs.mkdir(ext)
+//             fs.rename(path.join(basepath, item), path.join(basepath, ext, item))
+//         }
+//     }
 
+// }
 
+import fs from "fs/promises"
+import fsn from "fs"
+import path from "path"
 
+const basepath = ""
 
+let files = await fs.readdir(basepath)
 
+for (const item of files) {
+    console.log("running for", item)
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// }).get('/about', (req, res) => { 
-//   res.send('Hello about')     
-//   console.log("harry");
-                 
-// })
+    let ext = item.split(".").pop()
 
+    if (ext !== "js" && ext !== "json" && item.includes(".")) {
 
+        let dirPath = path.join(basepath, ext)
+        let filePath = path.join(basepath, item)
+        let newPath = path.join(dirPath, item)
 
+        if (!fsn.existsSync(dirPath)) {
+            await fs.mkdir(dirPath)
+        }
 
-
-
-
-
-
-
-
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+        await fs.rename(filePath, newPath)
+    }
+}
