@@ -106,6 +106,19 @@ app.get('/', (req, res) => {
 - In Documents: we get a doc with default given title.
 
 ---
+## FindOne function
+
+- at `http://localhost:3000/a` gives todo
+
+```
+app.get('/a', async(req, res) => {
+	let todo = await Todo.findOne({})
+	console.log(todo);
+	res.json({title:todo.title, task: todo.task})
+})
+```
+
+---
 # Other to read
 
 - [ ] Schema types
