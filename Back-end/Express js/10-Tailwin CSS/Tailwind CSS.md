@@ -40,10 +40,11 @@ npm init -y
 npm install tailwindcss @tailwindcss/cli
 
 Root
-├── input.css >>  "@import "tailwindcss";"
-└──index.html >>  "Given Below"
+├──src
+|	└──input.css >>  "@import "tailwindcss";"
+└──-───index.html >>  "Given Below"
 
-npx tailwindcss -i ./input.css -o ./output.css --watch
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 ```
 
 - index.html
@@ -61,24 +62,15 @@ npx tailwindcss -i ./input.css -o ./output.css --watch
 ```
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Break Point
 
-![[Pasted image 20260127213146.png]]
+- Definition =Dividing our site to behave differently depending on width of devices.
+
+```
+<div class="container bg-cyan-400 sm:bg-cyan-900 md:bg-cyan-100">
+```
+
+<img src="assets/breakpoint.png" max-width="90%" height="auto" alt="">
 
 ---
 # Other
