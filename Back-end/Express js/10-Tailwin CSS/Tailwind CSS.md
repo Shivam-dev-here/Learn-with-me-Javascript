@@ -8,10 +8,11 @@
 
 ```
 Root
-├── Moduls/
-│   └── Todo.js
-├── main.js
-└── Install & Apply.md
+├── assets/
+├── src/
+│   └── input.css
+├── index.html
+└── Tailwind CSS.md
 ```
 
 ---
@@ -71,11 +72,5 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 ```
 
 <img src="assets/breakpoint.png" max-width="90%" height="auto" alt="">
-
----
-# Other
----
-
-? install, bcoz m:1 link everything = lag, crash, time+++ |  m:2 = only needed things
 
 ---
