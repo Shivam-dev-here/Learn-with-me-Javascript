@@ -71,7 +71,7 @@ import {Todo} from "./Models/Todo.js"
 	app.get('/', (req, res) => {
 	
 	const todo = new Todo({title:"Water tank", task:"Research, buy req, implement, 
-	show result", iscompleted:"false"})
+	show result", isDone:"false"})
 	todo.save()                                             // saved in db
 	res.send('Hello World!')
 })
@@ -82,26 +82,31 @@ import {Todo} from "./Models/Todo.js"
 
 ---
 
+## Using Object as Schema with default value
 
+- Todo.js
 
+```
+const TodoSchema = new mongoose.Schema({
+	newtitle: {type: String, required = true, default:"Don't miss"},
+});
+```
 
+- main.js
 
+```
+app.get('/', (req, res) => {
+	const todo = new Todo({task:"Research,implement, show result", isDone:"false"})
+	todo.save()
+	console.log(Todo)
+	res.send('Hello World!')
+})
+```
 
+- In Documents: we get a doc with default given title.
 
-
-
-
-
-### Todo.js
-- [Mongoose](https://mongoosejs.com/docs/index.html)
-1. Copy kitten code (Schema function)
-2. const Kitten = mongoose.model('Kitten', kittySchema);  (export)
 ---
-### main.js
-1. import
-2. db connect
-3. express server + Todo entry
-4. save
+# Other to read
 
 - [ ] Schema types
 - [ ] type key

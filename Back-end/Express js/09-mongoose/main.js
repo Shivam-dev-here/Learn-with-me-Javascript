@@ -20,8 +20,6 @@ app.get('/a', async(req, res) => {        //use in url
 let todo = await Todo.findOne({})
 console.log(todo);
 res.json({title:todo.title, task: todo.task})
-jj
-
 })
 
 app.listen(port, () => {
