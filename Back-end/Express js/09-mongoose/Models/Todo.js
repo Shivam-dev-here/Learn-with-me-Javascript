@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const TodoSchema = new mongoose.Schema({
   title: String, 
   task: String, 
-  iscompleted: Boolean,
+  isDone: Boolean,
   days:Number
 });
 

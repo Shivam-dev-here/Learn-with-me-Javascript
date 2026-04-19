@@ -15,8 +15,6 @@
 
 ---
 
----
-
 # Initialize a Server
 
 - Connection String: `mongodb://localhost:27017/` get via right click on connected connection
@@ -40,26 +38,47 @@ app.listen(port, () => {
 ```
 
 ---
+## Creating a Schema
 
-
-
-
-
-
-
-
-
-
-
-## Heading
 
 ```
 Root
 ├── Moduls/
 │   └── Todo.js
 ├── main.js
-└── README.md
+└── Install & Apply.md
 ```
+
+- Todo.js
+
+```
+import mongoose from "mongoose";
+
+const TodoSchema = new mongoose.Schema({
+  title: String,
+  task: String,
+  isDone: Boolean,
+  days:Number
+});
+
+export const  Todo = mongoose.model('Todo', TodoSchema);
+```
+
+- main.js
+
+```
+import {Todo} from "./Models/Todo.js"
+	app.get('/', (req, res) => {
+	
+	const todo = new Todo({title:"Water tank", task:"Research, buy req, implement, 
+	show result", iscompleted:"false"})
+	todo.save()                                             // saved in db
+	res.send('Hello World!')
+})
+```
+
+- After a Run: creates Documents inside "Todo Connection" per reload 
+- ∀ wring insertion `E.g. number -> inserting string` generates error.
 
 ---
 
