@@ -53,3 +53,34 @@ npm i express@4
 - Paste at `nodejsapp` Directory on Filezilla
 
 ---
+## Dotenv
+
+- Inserting critical information here and access them in directory without actual showcase  
+
+- Install `npm i dotenv`
+- Create
+
+```
+Root
+ ├─── .env
+ └─── index.js
+```
+
+- `.env`     => `PASSWORD=Shivam`
+
+- `index.js`   =>   
+
+```
+const express = require('express')
+
+require('dotenv').config()
+
+const app = express()
+const port = 3000
+
+console.log(preocess.env)      // Provides ......
+console.log(preocess.env.PASSWORD)      // Provides 'PASSWORD' 
+```
+
+---
+
