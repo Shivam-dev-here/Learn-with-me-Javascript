@@ -79,8 +79,43 @@ const app = express()
 const port = 3000
 
 console.log(preocess.env)      // Provides ......
-console.log(preocess.env.PASSWORD)      // Provides 'PASSWORD' 
+console.log(preocess.env.PASSWORD)      // Provides 'PASSWORD' > NGP this Line
 ```
+
+---
+## Hosting a Website
+
+```
+Root
+ └─── index.html
+```
+
+- `index.html`: Add some CSS
+#### Terminal
+
+- apache: used
+- NGINX: better
+
+```
+apt install apache2
+y
+{space} 
+Enter
+cd /var/WWW
+ls
+cd html/
+```
+
+#### Filezilla
+
+- Remote site: `/var/WWW/html`  + Enter
+- Paste `index.html`
+- Overwrite + ok
+
+### Output
+
+- Browser
+- URL: {IP Address}   =>    `index.html`
 
 ---
 
