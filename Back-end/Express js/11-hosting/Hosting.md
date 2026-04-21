@@ -14,3 +14,13 @@ Description
 - Now we are in the terminal of server
 
 ---
+## FileZilla 
+
+- install [Download](https://filezilla-project.org/)
+- Insert
+- Port: 22?  ∵ To transfer file via SFTP
+- Click Yes
+
+<img src="./assets/filezilla.png" height="auto" width="833">
+
+---
