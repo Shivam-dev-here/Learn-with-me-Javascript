@@ -24,3 +24,32 @@ Description
 <img src="./assets/filezilla.png" height="auto" width="833">
 
 ---
+## Inserting a Node.js App
+
+### Filezilla
+
+1. Click on '/'  → dbl clk at Home folder
+2. Create Directory `nodejsapp`
+
+### Offline Folder
+
+```
+Root
+└─ src/
+    ├── controllers/
+    ├── models/
+    ├── routes/
+    ├── views/
+    └── index.js
+```
+
+- index.js
+```
+npm init -y
+npm i express@4
+```
+
+- Select `src/`   `package.json`     `package-lock.json`
+- Paste at `nodejsapp` Directory on Filezilla
+
+---
