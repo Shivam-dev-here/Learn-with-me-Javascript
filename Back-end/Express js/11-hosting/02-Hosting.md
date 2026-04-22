@@ -101,3 +101,76 @@ node index.js         // Says: Example.....port 3000
 - Output: Our index.js
 
 ---
+# ==Part B: HOSTING== 
+
+### ==Step 1: Using pm2==
+
+- pm2: Process Manager for Node.js app
+- Why: let us easily handle many NodeJS app host all together 
+#### Terminal: SERVER/installing
+
+```
+sudo npm install -g pm2
+pm2 start index.js
+```
+
+### ==Step 1: Using NGINX==
+
+- NGINX: a web server using as a proxy/
+#### Terminal: SERVER
+
+- installing nginx
+
+```
+apt install nginx
+y
+```
+
+- Updating file
+
+```
+sudo nano /etc/nginx/sites-available/default
+```
+
+- Find LOCATIONS
+	1. Remove existing # etc.
+	2. paste from L1 to L5 only
+	3. update Port
+
+```
+    location / {
+        proxy_pass http://localhost:3000;                L1
+        proxy_http_version 1.1;                          L2
+        proxy_set_header Upgrade $http_upgrade;          L3
+        proxy_set_header Connection 'upgrade';           
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;                L5
+    }
+}
+```
+
+- Exit 
+
+```
+ctrl + x
+y
+```
+
+- Run: test
+
+```
+sudo nginx -t
+```
+
+- Restart
+
+```
+sudo systemctl restart nginx
+```
+
+#### Browser: Output
+
+- URL: {IP Address}
+- Output: Our index.js
+
+---
