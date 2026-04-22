@@ -174,3 +174,8 @@ sudo systemctl restart nginx
 - Output: Our index.js
 
 ---
+# ==Part C: Point IP Add to domain== 
+
+- [Learn from here](https://www.hostinger.com/support/1863967-how-to-point-a-domain-to-hostinger/)
+
+---
