@@ -44,8 +44,97 @@ Root
 - `ClassName`: is `Class="box"` of CSS, Class is reserved hence `ClassName` for Reactjs
 
 ---
-# Run: To Start to project
+# Run: Start a project
 
 - `npm start` 
+
+
+
+---
+# Task: Create a click counter app  with & without reactjs.
+
+---
+## ==Part 1: == Without Reactjs
+
+- File Structure
+
+```
+Root
+└── without-reactjs.html
+```
+
+- `without-reactjs.html`: Includes high complexity with all Html, CSS, Js.
+- 
+---
+## ==Part 2: Alter: `src/App.js`==
+
+- Shivam-dev-here
+
+```
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      Shivam-dev-here
+    </div>
+  );
+}
+
+export default App;
+```
+
+- Click Counter 
+
+```
+function App() {
+  const [value, setValue] = useState(0)
+  
+  return (
+    <div className="App">
+      <div className='value'>{value}</div>
+      <button onClick={()=>{setValue(value +1)}}>Shivam-dev-here</button>
+    </div>
+  );
+}
+```
+
+---
+# Component
+
+- Small parts that are created to be used again  with dynamic reaction
+
+```
+01-Learning
+├── 01-README.md
+├── without-reactjs
+└── with-reactjs/
+	├── node_module/
+	├──	public/
+	└── src/
+		└── component/ Navbar.js
+```
+#### Example: 
+
+- `Navbar.js`: Code from file
+- `App.js`: 
+	- `import Navbar from './components/Navbar';`
+	- `<Navbar />`
+
+
+
+
+
+
+---
+
+# Other
+
+https://create-react-app.dev/docs/getting-started/
+
+#### VS Code: 
+
+`rafce`: A react arrow function component
 
 ---
