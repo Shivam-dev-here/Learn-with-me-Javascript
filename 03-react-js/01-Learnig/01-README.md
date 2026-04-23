@@ -44,3 +44,8 @@ Root
 - `ClassName`: is `Class="box"` of CSS, Class is reserved hence `ClassName` for Reactjs
 
 ---
+# Run: To Start to project
+
+- `npm start` 
+
+---
