@@ -113,19 +113,18 @@ function App() {
 	├── node_module/
 	├──	public/
 	└── src/
-		└── component/ Navbar.js
+		└── component
+			├──	Navbar.js
+			└── Footer.js
 ```
-#### Example: 
+#### Example: Creating a Navbar and Footer as a component
 
 - `Navbar.js`: Code from file
+- `Footer.js`: Code from file
 - `App.js`: 
 	- `import Navbar from './components/Navbar';`
 	- `<Navbar />`
-
-
-
-
-
+	- Similarly for Footer
 
 ---
 
