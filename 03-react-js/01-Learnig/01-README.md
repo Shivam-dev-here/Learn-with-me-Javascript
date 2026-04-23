@@ -130,6 +130,21 @@ function App() {
 	- Similarly for Footer
 
 ---
+# Props: Data pass in components
+
+- `Navbar.js`:  Add `<div className="logo"></div>`
+- `App.js`: Alter `<Navbar/>` to:  `<Navbar logoText = "Shivam-dev-here"/>`
+- `Navbar.js`:  Alter
+
+```
+...
+const Navbar = (props) => {
+  return (
+    <div>
+      <div className="logo">{props.logoText}</div>
+...
+
+```
 
 ---
 # Other
