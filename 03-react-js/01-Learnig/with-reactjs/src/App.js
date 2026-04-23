@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar logoText = "Shivam-dev-here"/>
       <div className='value'>{value}</div>
       <button onClick={()=>{setValue(value +1)}}>Shivam-dev-here</button>
       <Footer/>
