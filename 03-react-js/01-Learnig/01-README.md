@@ -19,3 +19,28 @@ description later
 - VS Code Extension:  `ES7 React/Redux/GraphQL/React-Native snippets`
 
 ---
+# File Structure
+
+```
+Root
+├── node_module/
+├──	public/
+├──	src/
+└── Install & Apply.md
+```
+
+#### `public/`     
+
+ - Used to give a file directly to use
+ - Example: let it includes `Shivam-dev-here.txt`
+ - URL: `localhost:3000/Shivam-dev-here.txt` provides that file
+
+#### `public/index.html`
+
+- Shown to use when he visits site
+#### `src/App.js`
+
+- Is delivered to `public/index.html`
+- `ClassName`: is `Class="box"` of CSS, Class is reserved hence `ClassName` for Reactjs
+
+---
