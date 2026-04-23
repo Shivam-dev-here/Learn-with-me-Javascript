@@ -9,3 +9,13 @@ description later
 - Example: `without-reactjs`
 
 ---
+# Install
+
+#### Terminal: Offline
+
+- `npx create-react-app with-reactjs`
+- open `with-reactjs` folder as vs code
+- VS Code Extension:  `ES7+ React/Redux/React-Native snippets`
+- VS Code Extension:  `ES7 React/Redux/GraphQL/React-Native snippets`
+
+---
