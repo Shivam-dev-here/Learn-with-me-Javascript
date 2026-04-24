@@ -5,3 +5,7 @@
 body{
   background-color: rgb(75, 224, 189);
 }
+
+.cards{
+  display: flex;
+}
