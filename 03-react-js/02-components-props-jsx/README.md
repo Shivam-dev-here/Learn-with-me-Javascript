@@ -59,10 +59,18 @@ Root
 		├── Navbar.jsx
 		|── Navbar.css
 		├── Footer.jsx
-		└── Footer.css
+		|── Footer.css
+		├── Card.jsx
+		└── Card.css
 ```
 
 - `Navbar.jsx`
 - `Navbar.css`
 - `Footer.jsx`
 - `Footer.css`
+- `Card.jsx`
+- `Card.css`
+
+- Integrated all in `App.jsx`
+
+---
