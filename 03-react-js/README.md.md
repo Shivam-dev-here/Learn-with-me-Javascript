@@ -40,5 +40,5 @@ function App() {
 
 - Js works on flow, once above line executed can't move up.
 - `a=a+1` will not work
-
+- Other ways ∃ but complexity ++
 ---
