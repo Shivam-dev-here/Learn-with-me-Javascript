@@ -3,6 +3,8 @@
 ---
 # Hook
 
+### Method 1: JSX way
+
 ```
 function App() {
   const [count, setCount] = useState(0)
@@ -21,4 +23,5 @@ function App() {
 	3. `<div>The count is {count}</div>`: Display count
 	4. `<... onClick={()=>{setCount(count + 1)}} ...>`: Function updates count
 
----
+### Method 2: Js doesn't support hook
+
