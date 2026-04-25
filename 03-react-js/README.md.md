@@ -25,3 +25,20 @@ function App() {
 
 ### Method 2: Js doesn't support hook
 
+```
+function App() {
+  const [count, setCount] = useState(0)
+  let a = 5;
+  return (
+    <>
+    <div>The count is {a}</div>
+    <button onClick={()=>{a=a+1}}>update count </button>
+    </>
+  )
+}
+```
+
+- Js works on flow, once above line executed can't move up.
+- `a=a+1` will not work
+
+---
