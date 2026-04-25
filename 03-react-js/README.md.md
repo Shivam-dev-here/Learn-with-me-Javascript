@@ -3,6 +3,12 @@
 ---
 # Hook
 
+```
+Root
+├── src
+     └── app.jsx
+```
+
 ### Method 1: JSX way
 
 ```
