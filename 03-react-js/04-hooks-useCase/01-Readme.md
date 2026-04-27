@@ -81,3 +81,26 @@ createRoot(document.getElementById('root')).render(
 ```
 
 ---
+# Example 1: When App.jsx renders  
+
+```
+import { useState, useEffect } from 'react'
+
+function App() {
+  const [count, setCount] = useState(0)
+  const [first, setFirst] = useState(0)
+
+  useEffect(() => {
+    alert("You will see me each time App.jsx renders");
+  }, [])  
+
+  useEffect(() => {
+    alert("count");
+  }, [count])
+
+  useEffect(() => {
+    alert("first");
+  }, [first])
+```
+
+---
