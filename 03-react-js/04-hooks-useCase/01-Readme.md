@@ -164,3 +164,21 @@ return (
 ```
 
 ---
+# Cleanup Function
+
+- `App.jsx`: remove
+
+```
+<Navbar color={"navy " + "blue" + color} />
+```
+
+- `Navbar.jsx`: Add
+
+```
+useEffect(() => {
+	alert("new first render of Navbar for cleanup ")
+	return () => {
+		alert("Component was unmounted")
+	}
+})
+```
