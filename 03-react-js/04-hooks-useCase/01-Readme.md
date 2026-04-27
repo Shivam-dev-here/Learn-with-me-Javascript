@@ -29,4 +29,12 @@ useEffect(() => {
 	
 	3. Example: Varaible array
 
+```
+import { useState, useEffect } from 'react'
+
+useEffect(() => {
+	alert("Alter count = I comes");
+}, [count])
+```
+
 ---
