@@ -117,3 +117,25 @@ Root
 - `Navbar.jsx` :  File
 - `App.jsx`: import `Navbar.jsx` &  add `<Navbar color={"navy " + "blue"} />`
 - Output: Display's Navbar's return
+
+---
+# Example 3: External useEffect depending on App.jsx
+
+```
+Root
+|── src
+    └── App.jsx
+```
+
+- `App.jsx`
+
+```
+const [color, setColor] = useState(0)
+
+useEffect(() => {
+	alert("count");
+	setColor(color + 1)
+}, [count])
+```
+
+---

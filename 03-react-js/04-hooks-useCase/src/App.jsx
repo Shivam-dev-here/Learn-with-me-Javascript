@@ -8,6 +8,8 @@ import Navbar from './components/Navbar'
 function App() {
   const [count, setCount] = useState(0)
   const [first, setFirst] = useState(0)
+  const [color, setColor] = useState(0)
+
 
   useEffect(() => {
     alert("You will see me each time App.jsx renders");
@@ -15,6 +17,7 @@ function App() {
 
   useEffect(() => {
     alert("count");
+    setColor(color + 1)
   }, [count])
 
   useEffect(() => {
@@ -25,7 +28,7 @@ function App() {
 
   return (
     <>
-    <Navbar color={"navy " + "blue"} />
+    <Navbar color={"navy " + "blue" + color} />
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
