@@ -54,25 +54,30 @@ createRoot(document.getElementById('root')).render(
 ---
 ## `useStateSnippet`
 
-- Spelling is important
+- ==Spelling is important==
+
+- Run for every render
 
 ```
-import { useState, useEffect } from 'react'
-
-function App() {
-  const [count, setCount] = useState(0)
-  const [first, setFirst] = useState(0)
-
   useEffect(() => {
     alert("You will see me each time App.jsx renders");
-  }, [])  
+  }
+```
 
+- Run for first render
+
+```
+  useEffect(() => {
+    alert("count");
+  }, [])
+```
+
+- Run when mentioned variable changes
+
+```
   useEffect(() => {
     alert("count");
   }, [count])
-
-  useEffect(() => {
-    alert("first");
-  }, [first])
 ```
 
+---
