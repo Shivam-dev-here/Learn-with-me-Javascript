@@ -104,3 +104,16 @@ function App() {
 ```
 
 ---
+# Example 2: When components/Navbar.jsx renders
+
+```
+Root
+├── components
+│   └── Navbar.jsx
+|── src
+|   └── App.jsx
+```
+
+- `Navbar.jsx` :  File
+- `App.jsx`: import `Navbar.jsx` &  add `<Navbar color={"navy " + "blue"} />`
+- Output: Display's Navbar's return
