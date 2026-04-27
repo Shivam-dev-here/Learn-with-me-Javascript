@@ -139,3 +139,28 @@ useEffect(() => {
 ```
 
 ---
+
+# Example 4: App.jsx depends on External render
+
+- `Navbar.jsx`
+
+```
+const Navbar = ({ color }) => {
+
+useEffect(() => {
+	alert("You will see me each time App.jsx renders");
+}
+
+useEffect(() => {
+	alert("count");
+	setColor(color + 1)
+}, [count])
+
+useEffect(() => {
+	alert("first");
+}, [first])
+
+return (
+```
+
+---
