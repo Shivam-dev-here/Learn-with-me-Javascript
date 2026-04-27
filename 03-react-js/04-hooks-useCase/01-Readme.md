@@ -38,3 +38,17 @@ useEffect(() => {
 ```
 
 ---
+#### `Root/src/main.jsx`
+- Cause:  run useEffect two times
+- Reason: In Development project is tested and then run
+- Remove:  both `</StrictMode>,`
+
+```
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+```
+
+---
