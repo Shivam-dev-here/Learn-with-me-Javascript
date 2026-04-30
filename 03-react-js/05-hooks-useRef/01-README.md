@@ -45,3 +45,25 @@ function App() {
 
 ---
 #### useRef + Dom
+
+- `App.jsx`
+
+```
+import { useState, useEffect, useRef} from 'react'
+
+function App() {
+  const [count, setCount] = useState(0)
+  const ref = useRef()
+useEffect(() => {
+  console.log(`First Render...`);
+  ref.current.style.backgroundColor = "Blue"
+}, [])
+
+...
+
+<button
+	ref = {ref}
+...
+```
+
+---

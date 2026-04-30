@@ -6,13 +6,12 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const x = useRef(0)
-
-  useEffect(() => {
-    x.current=x.current+1
-    console.log(`x: ${x.current}`)
-  });
+  const ref = useRef()
   
+useEffect(() => {
+  console.log(`First Render...`);
+  ref.current.style.backgroundColor = "Blue"
+}, [])
 
   return (
     <>
@@ -29,6 +28,7 @@ function App() {
           </p>
         </div>
         <button
+          ref = {ref}
           type="button"
           className="counter"
           onClick={() => setCount((count) => count + 1)}
