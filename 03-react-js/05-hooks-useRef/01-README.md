@@ -8,21 +8,40 @@ description
 - Re-render triggers a reset to other variables.
 - Example: `let x = 0` will be update with count and display in log, ∀ renders reset it to 0. 
 
+#### Without useRef
+
 - `App.jsx`
 
 ```
 import { useState, useEffect} from 'react'
 
 function App() {
-const [count, setCount] = useState(0)
-let x =0; 
+	const [count, setCount] = useState(0)
+	let x =0; 
+	
+	useEffect(() => {
+		x=x+1
+		console.log(`x: ${x}`)
+	});
+...
+```
+- Console: 5x repeats x=1
+---
+#### With useRef
 
-useEffect(() => {
-	x=x+1
-	console.log(`x: ${x}`)
-});
+```
+import { useState, useEffect, useRef} from 'react'
+
+function App() {
+	const [count, setCount] = useState(0)
+	const x = useRef(0)
+	
+	useEffect(() => {
+		x.current=x.current+1
+		console.log(`x: ${x.current}`)
+	});
 ...
 ```
 
 ---
-
+#### useRef + Dom
