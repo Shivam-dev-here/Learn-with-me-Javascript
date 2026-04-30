@@ -6,11 +6,11 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const ref = useRef()
+  const btnRef = useRef()
   
 useEffect(() => {
   console.log(`First Render...`);
-  ref.current.style.backgroundColor = "Blue"
+  btnRef.current.style.backgroundColor = "Blue"
 }, [])
 
   return (
@@ -28,13 +28,14 @@ useEffect(() => {
           </p>
         </div>
         <button
-          ref = {ref}
+          ref = {btnRef}
           type="button"
           className="counter"
           onClick={() => setCount((count) => count + 1)}
         >
           Count is {count}
         </button>
+        <button onClick={()=> {btnRef.current.style.display = "none"}}>Display: None</button>
       </section>
 
       <div className="ticks"></div>

@@ -44,7 +44,7 @@ function App() {
 ```
 
 ---
-#### useRef + Dom
+####Single:  useRef + Dom
 
 - `App.jsx`
 
@@ -67,3 +67,29 @@ useEffect(() => {
 ```
 
 ---
+#### Multiple: useRef + Dom
+
+```
+import { useState, useEffect, useRef} from 'react'
+
+function App() {
+	const [count, setCount] = useState(0)
+	const btnRef = useRef()
+	
+	useEffect(() => {
+		console.log(`First Render...`);
+		btnRef.current.style.backgroundColor = "Blue"
+	}, [])
+	
+...
+	
+	<button ref = {btnRef}
+	...
+	</button>
+	
+	<button onClick={()=> {btnRef.current.style.display = "none"}}>Display: 
+	None</button>
+	
+...
+```
+
