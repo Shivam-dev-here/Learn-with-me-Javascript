@@ -52,3 +52,16 @@ description
 ```
 
 ---
+
+### Above + Tailwind CSS
+
+1. Documentation: [Click me](https://tailwindcss.com/docs/installation/using-vite)
+2. Add class
+
+```
+<div className="m-4 border border-1 border-purple-600">
+	<div className="todo">{todo.title}</div>
+	<div className="todo">{todo.desc}</div>
+</div>
+```
+
