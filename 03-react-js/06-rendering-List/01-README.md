@@ -19,7 +19,7 @@ description
 
 ---
 
-### ==List Rendering==
+### ==List Rendering== : NGP
 
 - `App.jsx`
 
@@ -53,7 +53,7 @@ description
 
 ---
 
-### Above + Tailwind CSS
+### Above + Tailwind CSS : GP
 
 1. Documentation: [Click me](https://tailwindcss.com/docs/installation/using-vite)
 2. Add class
@@ -65,3 +65,29 @@ description
 </div>
 ```
 
+### ==Good Practice Way==
+
+```
+...
+
+const [todo, setTodo] = useState([
+	{ title: "M", desc: "Mango is here in box" },
+	{ title: "H", desc: "Honey is here in box" },
+	{ title: "C", desc: "Choco is here in box" },
+])
+
+return (
+	<>
+		<section id="center">
+	
+...
+	
+	{todo.map((todo, i) => {
+		return <div key={i} className="m-4 border border-1 border-purple-600">
+			<div className="todo">{todo.title}</div>
+			<div className="todo">{todo.desc}</div>
+		</div>
+	})}
+	
+...
+```

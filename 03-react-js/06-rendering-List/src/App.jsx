@@ -17,16 +17,16 @@ function App() {
 
 
 
-  const Todo = ({ todo }) => {
-    return (
-      <>
-      <div className="m-4 border border-1 border-purple-600">
-        <div className="todo">{todo.title}</div>
-        <div className="todo">{todo.desc}</div>
-      </div>
-      </>
-    )
-  }
+  // const Todo = ({ todo }) => {
+  //   return (
+  //     <>
+  //     <div className="m-4 border border-1 border-purple-600">
+  //       <div className="todo">{todo.title}</div>
+  //       <div className="todo">{todo.desc}</div>
+  //     </div>
+  //     </>
+  //   )
+  // }
 
   return (
     <>
@@ -54,8 +54,12 @@ function App() {
         </button>
 
       </section>
-      {todo.map((t, i) => {
-        return <Todo key={i} todo={t} />
+      {todo.map((todo, i) => {
+        // return <Todo key={i} todo={t} />
+        return <div key={i} className="m-4 border border-1 border-purple-600">
+        <div className="todo">{todo.title}</div>
+        <div className="todo">{todo.desc}</div>
+        </div>
       })}
 
       <div className="ticks"></div>
