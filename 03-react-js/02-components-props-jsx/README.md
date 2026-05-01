@@ -74,3 +74,24 @@ Root
 - Integrated all in `App.jsx`
 
 ---
+
+## ==Component Inside App.jsx==
+
+- `App.jsx`
+
+```
+...
+
+const Todo = () => {return (
+	<>
+		<div>I am a tiny component inside 'App.jsx'</div>
+	</>
+)}
+  
+...
+
+<Todo/>
+
+...
+```
+

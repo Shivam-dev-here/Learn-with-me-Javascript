@@ -4,7 +4,7 @@ description
 # Rendering
 
 - Update = refresh whole function
-### Conditional Rendering
+#### Conditional Rendering
 
 - App.jsx
 	
@@ -13,5 +13,9 @@ description
 	
 	### Method 1: Ternary operator
 	#### Method 2: Use && 
-		`{showbtn && <button >Show you a button</button>}`
+	
+	`{showbtn && <button >Show you a button</button>}`
+	only if showbtn is T then proceed.
+
 ---
+

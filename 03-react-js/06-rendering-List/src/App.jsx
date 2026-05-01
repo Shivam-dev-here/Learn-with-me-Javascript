@@ -8,6 +8,12 @@ function App() {
   const [count, setCount] = useState(0)
   const [showbtn, setshowbtn] = useState(false)
 
+  const Todo = () => {return (
+    <>
+    <div>I am a tiny component inside 'App.jsx'</div>
+    </>
+  )}
+
   return (
     <>
       <section id="center">
@@ -23,14 +29,15 @@ function App() {
           </p>
         </div>
         {showbtn?<button >I am true!</button>:<button >I am False!</button>}
-
+{/* {showbtn && <button >Show you a button</button>} */}
         <button
           type="button"
           className="counter"
           onClick={()=> setshowbtn(!showbtn)}
         >
-          Count is {count}
+          Toggle showbtn
         </button>
+        <Todo/>
       </section>
 
       <div className="ticks"></div>
