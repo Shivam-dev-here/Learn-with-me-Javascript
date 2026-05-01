@@ -8,11 +8,23 @@ function App() {
   const [count, setCount] = useState(0)
   const [showbtn, setshowbtn] = useState(false)
 
-  const Todo = () => {return (
-    <>
-    <div>I am a tiny component inside 'App.jsx'</div>
-    </>
-  )}
+  const [todo, setTodo] = useState([
+    { title: "M", desc: "Mango is here in box" },
+    { title: "H", desc: "Honey is here in box" },
+    { title: "C", desc: "Choco is here in box" },
+  ])
+
+
+
+
+  const Todo = ({ todo }) => {
+    return (
+      <>
+        <div className="todo">{todo.title}</div>
+        <div className="todo">{todo.desc}</div>
+      </>
+    )
+  }
 
   return (
     <>
@@ -28,17 +40,21 @@ function App() {
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
         </div>
-        {showbtn?<button >I am true!</button>:<button >I am False!</button>}
-{/* {showbtn && <button >Show you a button</button>} */}
+        {showbtn ? <button >I am true!</button> : <button >I am False!</button>}
+        {/* {showbtn && <button >Show you a button</button>} */}
+
         <button
           type="button"
           className="counter"
-          onClick={()=> setshowbtn(!showbtn)}
+          onClick={() => setshowbtn(!showbtn)}
         >
           Toggle showbtn
         </button>
-        <Todo/>
+
       </section>
+              {todo.map((t, i) => {
+          return <Todo key={i} todo={t} />
+        })}
 
       <div className="ticks"></div>
 

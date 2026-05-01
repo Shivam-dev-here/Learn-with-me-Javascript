@@ -4,7 +4,7 @@ description
 # Rendering
 
 - Update = refresh whole function
-#### Conditional Rendering
+#### ==Conditional Rendering==
 
 - App.jsx
 	
@@ -19,3 +19,36 @@ description
 
 ---
 
+### ==List Rendering==
+
+- `App.jsx`
+
+```
+	
+...
+	
+	const [todo, setTodo] = useState([
+		{ title: "M", desc: "Mango is here in box" },
+		{ title: "H", desc: "Honey is here in box" },
+		{ title: "C", desc: "Choco is here in box" },
+	])
+	const Todo = ({ todo }) => {
+		return (
+			<>
+				<div className="todo">{todo.title}</div>
+				<div className="todo">{todo.desc}</div>
+			</>
+		)
+	}
+	
+...
+	
+	{todo.map((t, i) => {
+		return <Todo key={i} todo={t} />
+	})}
+	
+...
+	
+```
+
+---
