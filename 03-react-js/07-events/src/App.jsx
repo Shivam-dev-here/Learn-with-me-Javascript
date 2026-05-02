@@ -6,25 +6,36 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const handleClick = () =>{
+  const [name, setName] = useState("Shivam-dev-here")
+
+  const handleClick = () => {
     alert("Got YOu!!!")
   }
-  const handleHover = () =>{
-    alert("Dont try again!!!")
+
+  const handleHover = () => {
+    console.log("Dont try again!!!")
   }
 
+  const handleChange = (e) => {
+    setName(e.target.value)
+  }
 
   return (
     <>
-     
-     <div className="btn1">
-      <button onClick={handleClick} >Click mE</button>
-     </div>
 
-     <div className="btn2">
-      <button onMouseOver ={handleHover} >! HOVER</button>
-     </div>
-     
+      <div className="btn1">
+        <button onClick={handleClick} >Click mE</button>
+      </div>
+
+      <div className="btn2">
+        <button onMouseOver={handleHover} >! HOVER &gt; Console</button>
+      </div>
+      {/* <input type="text" onChange={(e) => console.log(e.target.value)} /> */}
+
+      <div className="box">
+        <input type="text" value={name} onChange={handleChange}  />
+      </div>
+
     </>
   )
 }

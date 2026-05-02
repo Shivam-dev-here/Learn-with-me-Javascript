@@ -55,7 +55,11 @@ body {
 }
 
 .btn1, .btn2{
-  margin-top: 20vh;
+    margin-top: 10vh;
+}
+
+.box{
+  margin-top: 10vh;
 }
 
 
