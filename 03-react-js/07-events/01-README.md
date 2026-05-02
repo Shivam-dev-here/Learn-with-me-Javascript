@@ -33,5 +33,15 @@ description
 - Alter
 
 ```
+const [name, setName] = useState("Shivam-dev-here")
 
+const handleChange = (e) => {
+	setName(e.target.value)
+}
+
+	<div className="box">
+		<input type="text" value={name} onChange={handleChange}  />
+	</div>
 ```
+
+---
