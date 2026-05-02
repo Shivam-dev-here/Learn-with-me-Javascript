@@ -6,7 +6,8 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [name, setName] = useState("Shivam-dev-here")
+  // const [name, setName] = useState("Shivam-dev-here")
+  const [form, setForm] = useState({email:'',password:''})
 
   const handleClick = () => {
     alert("Got YOu!!!")
@@ -16,8 +17,11 @@ function App() {
     console.log("Dont try again!!!")
   }
 
+  // const handleChange = (e) => {
+  //   setName(e.target.value)
+  // }
   const handleChange = (e) => {
-    setName(e.target.value)
+    setForm({...form, [e.target.name]:e.target.value})
   }
 
   return (
@@ -32,8 +36,13 @@ function App() {
       </div>
       {/* <input type="text" onChange={(e) => console.log(e.target.value)} /> */}
 
-      <div className="box">
+      {/* <div className="box">
         <input type="text" value={name} onChange={handleChange}  />
+      </div> */}
+
+      <div className="box">
+        <input type="text" name='email' value={form.email} onChange={handleChange}  />
+        <input type="text" name='password' value={form.password} onChange={handleChange}  />
       </div>
 
     </>
