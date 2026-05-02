@@ -54,6 +54,11 @@ body {
   margin: 0;
 }
 
+.btn1, .btn2{
+  margin-top: 20vh;
+}
+
+
 #root {
   width: 1126px;
   max-width: 100%;
