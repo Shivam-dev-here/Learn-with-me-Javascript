@@ -45,3 +45,23 @@ const handleChange = (e) => {
 ```
 
 ---
+## Form problem
+
+- With above input solution: Current updating input box lags behind a tick may cause trouble
+- Therefore: Different Solution for multiple input box
+
+```
+const [form, setForm] = useState({email:'',password:''})
+
+const handleChange = (e) => {
+	setForm({...form, [e.target.name]:e.target.value})
+}
+
+<div className="box">
+	<input type="text" name='email' value={form.email} onChange={handleChange}  />
+	<input type="text" name='password' value={form.password} onChange=
+	{handleChange}  />
+</div>
+```
+
+---
