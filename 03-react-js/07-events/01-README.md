@@ -65,3 +65,26 @@ const handleChange = (e) => {
 ```
 
 ---
+
+## Remove warning for empty `useState`
+
+`form.password`
+- If form.email exist appears else nothing
+
+```
+...
+	
+const [form, setForm] = useState({})
+	
+...
+	
+	<input type="text" name='email' value={form.email?form.email:""} onChange=
+	{handleChange}  />
+	
+	<input type="text" name='password' value={form.password?form.password:""} 
+	onChange={handleChange}  />
+	
+...
+```
+
+---
