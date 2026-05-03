@@ -55,6 +55,105 @@ import Navbar from './components/Navbar'
 ```
 
 ---
+# ==With Router==
+
+```
+Root
+└── src
+	├── components
+    |    ├── Navbar.jsx
+	|	 ├── Home.jsx
+	|	 ├── About.jsx
+	|	 ├── Contact.jsx
+	|	 └── Login.jsx 
+	└── App.jsx
+```
+
+#### Navbar.jsx
+
+```
+import React from 'react'
+
+import { Link } from 'react-router-dom'
+
+const Navbar = () => {
+	return (
+		<div>
+			<nav>
+				<Link to="/"><li>Home</li></Link>
+				<Link to="/About"><li>About</li></Link>
+				<Link to="/Contact"><li>Contact</li></Link>
+				<Link to="/Login"><li>Login</li></Link>
+			</nav>
+			</div>
+	)
+}
+
+export default Navbar
+```
+#### App.jsx
+
+- ∵ This is done in `main.jsx` so that it works for all
+- But ∵ we Learning and done on `app.jsx` We do
+
+```
+import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Login from './components/Login'
+import Contact from './components/Contact'
+import About from './components/About'
+
+function App() {
+	const router = createBrowserRouter([
+		{
+			path:"/",
+			element: <><Navbar /><Home/></>
+		},
+		{
+			path:"/Login",
+			element: <><Navbar /><Login/></>
+		},
+		{
+			path:"/About",
+			element: <><Navbar /><About/></>
+		},
+		{
+			path:"/Contact",
+			element: <><Navbar /><Contact/></>
+		}
+	])
+	
+	return (
+		<>
+			<Navbar />
+			<RouterProvider router={router}/>
+		</>
+	)
+}
+
+export default App
+```
+#### Home.jsx
+
+```
+import React from 'react'
+
+const Home = () => {
+	return (
+		<div>
+			  Home says
+		</div>
+	)
+}
+
+export default Home
+```
+#### Similarly for About, Login & Contact
+
+---
 
 ---
 # Other
