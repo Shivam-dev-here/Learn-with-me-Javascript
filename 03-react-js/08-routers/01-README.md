@@ -154,6 +154,31 @@ export default Home
 #### Similarly for About, Login & Contact
 
 ---
+# ==ALTER== 
+
+- IF IN MAIN.jsx
+- Not checked yet
+
+```
+	const router = createBrowserRouter([
+		{
+			path:"/",
+			element: <Home/>
+		},
+		{
+			path:"/Login",
+			element: <Login/>
+		},
+		{
+			path:"/About",
+			element: <About/>
+		},
+		{
+			path:"/Contact",
+			element: <Contact/>
+		}
+		])
+```
 
 ---
 # Other
