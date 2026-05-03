@@ -225,13 +225,38 @@ export default User
 ---
 # Active Link Highlighting 
 
+```
+Root
+└── src
+	├── components
+    |    └── Navbar.jsx
+	└── index.css
+```
 
+#### index.css
 
+```
+...
+	
+.red{
+	background-color: red;
+	color: aliceblue;
+}
+	
+...
+```
 
+#### Navbar.jsx
 
+```
+import { NavLink } from 'react-router-dom'
+...
+	<NavLink className={(e)=>{return e.isActive?"red":""}} to="/"><li>Home</li>
+	</NavLink>
+...
+```
 
-
-
+---
 # Other
 
 - Documentation: [click me](https://reactrouter.com/tutorials/quickstart)
