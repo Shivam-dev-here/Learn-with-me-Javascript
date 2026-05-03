@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Contact from './components/Contact'
 import About from './components/About'
+import User from './components/User'
 
 function App() {
   const router = createBrowserRouter([
@@ -24,6 +25,10 @@ function App() {
     {
       path:"/Contact",
       element: <><Navbar /><Contact/></>
+    },
+    {
+      path:"/User/:username",
+      element: <><Navbar /><User/></>
     }
   ])
 
