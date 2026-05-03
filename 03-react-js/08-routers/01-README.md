@@ -55,3 +55,8 @@ import Navbar from './components/Navbar'
 ```
 
 ---
+
+---
+# Other
+
+- Documentation: [click me](https://reactrouter.com/tutorials/quickstart)
