@@ -181,7 +181,46 @@ export default Home
 ```
 
 ---
+# Dynamic Route (URL Parameter: username)
 
+```
+Root
+└── src
+	├── components
+    |    └── User.jsx
+	└── App.jsx
+```
+
+#### App.jsx
+
+```
+import User from './components/User'
+	
+...
+	{
+		path:"/User/:username",
+		element: <><Navbar /><User/></>
+	}
+...
+```
+
+#### User.jsx
+
+```
+import React from 'react'
+import { useParams } from 'react-router-dom'
+
+const User = () => {
+	const params = useParams()
+	return (
+		<div>
+			  I am {params.username}
+		</div>
+	)
+}
+
+export default User
+```
 
 ---
 # Other
