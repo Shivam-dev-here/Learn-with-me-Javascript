@@ -9,10 +9,49 @@ descri0ption
 #### Install: 
 
 - Terminal Offline: `npm i react-router-dom`
-- Import: ``
+- App.jsx: `import { createBrowserRouter } from 'react-router-dom'`
 
 ---
-### Use
+# Without Router
 
+```
+Root
+└── src
+	├── components
+    |    └── Navbar.jsx
+	└── App.jsx
+```
 
+- `Navbar.jsx`
 
+```
+import React from 'react'
+
+const Navbar = () => {
+	return (
+		<div>
+			<nav>
+				<a href="/"><li>Home</li></a>
+				<a href="/"><li>About</li></a>
+				<a href="/"><li>Contact</li></a>
+			</nav>
+		</div>
+	)
+}
+
+export default Navbar
+```
+
+- `App.jsx`
+
+```
+import Navbar from './components/Navbar'
+	
+...
+	
+<> <Navbar /> </>
+	
+...
+```
+
+---
