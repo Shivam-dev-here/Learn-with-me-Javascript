@@ -30,6 +30,7 @@ Root
 		  		└── Component.jsx
 ```
 
+---
 ## Solution 1:
 
 - Prop dealing: Count function must deliver the value from "App.jsx" to "Navbar.jsx" to
@@ -43,6 +44,19 @@ Root
 	 └── Without useContext API
 		   ├── App.jsx
 		   └── Components/
+```
+
+---
+## Solution 2:
+
+```
+Root
+├── Context/context.js
+├── App.jsx
+└── Components
+	├── Navbar
+	├── Button
+	└── Component1
 ```
 
 ---
