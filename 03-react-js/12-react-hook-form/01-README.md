@@ -10,3 +10,10 @@ description below
 - Documentation here  [Click me](https://www.react-hook-form.com/get-started)
 
 ---
+#### Setup
+
+1. `npm install react-hook-form`
+2. See and understand example from Documentation.
+
+---
+
