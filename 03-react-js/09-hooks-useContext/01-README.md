@@ -15,7 +15,7 @@ description
 Root
 ├── components
 |	 ├── Navbar.jsx
-|	 |── Button.jsx
+|	 ├── Button.jsx
 │    └── Component1.jsx
 └── App.jsx
 ```
@@ -30,11 +30,20 @@ Root
 		  		└── Component.jsx
 ```
 
-#### Solution 1:
+## Solution 1:
+
 - Prop dealing: Count function must deliver the value from "App.jsx" to "Navbar.jsx" to
 	"Button.jsx" to "Component1.jsx"
 	1. import the components and
 	2. Pass the count as variable.
-	
+
+```
+Root
+└── Public
+	 └── Without useContext API
+		   ├── App.jsx
+		   └── Components/
+```
+
 ---
 
