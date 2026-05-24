@@ -10,16 +10,17 @@ function App() {
 
   return (
     <>
-    <div className="container">
+      <div className="container">
 
-      <form action="" onSubmit={handleSubmit(onSubmit)}>
-        <input placeholder='username' type="text" {...register("username", {required:"true", minLength:6, maxLength:8})} />
-        <br />
-        <input placeholder='password' type="password" {...register("password", {required:"true", minLength:6, maxLength:16})}/>
-        <br />
-        <input type="submit" value="Submit" /> 
-      </form>
-    </div>
+        <form action="" onSubmit={handleSubmit(onSubmit)}>
+          <input placeholder='username' type="text" {...register("username", { required: "true", minLength: 6, maxLength: 8 })} />
+          {errors.username && <div>There is error</div>}
+          <br />
+          <input placeholder='password' type="password" {...register("password", { required: "true", minLength: 6, maxLength: 16 })} />
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </>
   )
 }
