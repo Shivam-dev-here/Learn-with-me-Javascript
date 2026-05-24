@@ -1,14 +1,31 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+
 import './App.css'
+
+const nums = new Array(30_00_000).fill(0).map((_, i) => {
+  return {
+    index: i,
+    isMagical: i === 29_00_000
+  }
+})
 
 function App() {
   const [count, setCount] = useState(0)
+  const [numbers, setNumbers] = useState(nums)
+
+
+
+  // const magical = numbers.find(item => item.isMagical === true)
+  const magical = useMemo(() => numbers.find(item => item.isMagical === true), [])
+
+
 
   return (
     <>
+      <span>Magical number is {magical.index}</span>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
