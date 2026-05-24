@@ -7,10 +7,19 @@ import Navbar from './assets/components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [adjective, setadjective] = useState("Good")
+
+
+    const getAdjective = useCallback(()=>{
+    return "Worst" + count
+  },[])
+
+  
 
   return (
 
     <>
+    <Navbar adjective={"Stylish"} getAdjective={getAdjective}/>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
