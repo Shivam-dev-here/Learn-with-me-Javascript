@@ -12,7 +12,7 @@ function App() {
 
     const getAdjective = useCallback(()=>{
     return "Worst" + count
-  },[])
+  },[count])
 
   
 

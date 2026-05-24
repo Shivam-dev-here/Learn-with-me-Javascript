@@ -30,3 +30,14 @@ import { useState, useCallback } from 'react'
 3. See callback hook, keep freezing the function
 
 ---
+## Unfreeze function if prop is updated
+
+```
+	const getAdjective = useCallback(()=>{
+	return "Worst" + count
+	},[count])
+```
+
+- square bracket [ ] is dependent variable
+
+---
