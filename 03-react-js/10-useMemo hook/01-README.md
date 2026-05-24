@@ -7,12 +7,22 @@
 
 ---
 Note: Both for unchanged array
-#### Without useMemo
+#### Without useMemo  for unchangeable array
 
-`const magical = numbers.find(item => item.isMagical === true)`
+	`const magical = numbers.find(item => item.isMagical === true)`
 
-#### With useMemo
+#### With useMemo  for unchangeable array
 
-`const magical = useMemo(() => numbers.find(item => item.isMagical === true), [])`
+	`const magical = useMemo(() => numbers.find(item => item.isMagical === true), 
+	[])`
+
+#### With useMemo for changeable array
+
+```
+const magical = useMemo(() => numbers.find(item => item.isMagical === true),[numbers])
+	
+...
+
+``` 
 
 ---

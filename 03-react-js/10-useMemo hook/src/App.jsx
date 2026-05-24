@@ -19,7 +19,7 @@ function App() {
 
 
   // const magical = numbers.find(item => item.isMagical === true)
-  const magical = useMemo(() => numbers.find(item => item.isMagical === true), [])
+  const magical = useMemo(() => numbers.find(item => item.isMagical === true), [numbers])
 
 
 
@@ -41,8 +41,18 @@ function App() {
         <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
+          onClick={() => {
+
+            setCount((count) => count + 1);
+            if (count == 10) {
+              setNumbers(new Array(10_00_000).fill(0).map((_, i) => {
+                return {
+                  index: i,
+                  isMagical: i === 9_00_000
+                }
+              }))
+            }
+          }}>
           Count is {count}
         </button>
       </section>
