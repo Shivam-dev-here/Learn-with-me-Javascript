@@ -112,31 +112,22 @@ const onSubmit = async (data) =>{
 ---
 # Posting Data inside Server
 
-1. Terminal 1: npm run dev
-2. Terminal 2: npm i express@4
-3. Create a file: Root/Backend/server.js
+#### React Terminal:
 
+- `npm run dev`
+#### Express Terminal: 
+
+1. `npm i express@4`
+2. `npm i cors`
+3. `npm i body-parser`
+4. `node .\backend\server.js`
 #### Server.js
 
-```
-
-```
-
-4. Terminal 2: node .\backend\server.js
-
+- Create a file: Root/Backend/server.js
 #### App.jsx
 
-```
+- Updated Code.
 
-```
+---
 
-5. Terminal 2: npm i cors
 
-#### Server.js
-
-```
-import cors from "cors"
-app.use(cors())
-```
-
-5. Terminal 2: npm i body-parser
