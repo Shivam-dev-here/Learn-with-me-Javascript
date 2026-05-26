@@ -4,7 +4,7 @@ import './App.css'
 
 
 function App() {
-  const { register, handleSubmit, watch, formState: { errors, isSubmitting } } = useForm();
+  const { register, handleSubmit, setError, formState: { errors, isSubmitting } } = useForm();
 
 const delay = (d) =>{
   return new Promise((resolve, reject)=>{
@@ -17,6 +17,12 @@ const delay = (d) =>{
   const onSubmit = async (data) =>{
     await delay(2)
     console.log(data);
+    if(data.username !=="shivam"){
+      setError("myform", {message: "Credential Error"})
+    }
+    if(data.username === "hacker"){
+      setError("blocked", {message: "Invalid User"})
+    }
   } 
 
 
@@ -56,6 +62,8 @@ const delay = (d) =>{
           <input placeholder='password' type="password" {...register("password", { required: "true", minLength: 6, maxLength: 16 })} />
           <br />
           <input disabled={isSubmitting} type="submit" value="Submit" />
+          {errors.myform && <div>{errors.myform.message}</div>}
+          {errors.blocked && <div>{errors.blocked.message}</div>}
         </form>
       </div>
     </>
