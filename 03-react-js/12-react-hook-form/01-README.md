@@ -90,3 +90,22 @@ function App() {
 
 ---
 
+## Throw Custom Server Error
+
+```
+function App(){ 
+	setError
+	
+const onSubmit = async (data) =>{
+	if(data.username !=="shivam"){
+		setError("myform", {message: "Credential Error"})
+	}
+	if(data.username === "hacker"){
+		setError("blocked", {message: "Invalid User"})
+	}
+}
+
+	{errors.myform && <div>{errors.myform.message}</div>}
+	{errors.blocked && <div>{errors.blocked.message}</div>}
+</form>
+```
