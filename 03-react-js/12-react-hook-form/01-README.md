@@ -55,7 +55,38 @@ function App() {
 - Solution: Disable Submission button temporarily & add timeout.
 
 ```
-
+function App() {
+	  const { 
+		  register, 
+		  handleSubmit, 
+		  watch, 
+		  formState: { errors, isSubmitting } 
+	} = useForm();
+	
+	const delay = (d) =>{
+		return new Promise((resolve, reject)=>{
+			setTimeout(() => {
+				  resolve()
+			}, d * 1000);
+		})
+	}
+	
+	const onSubmit = async (data) =>{
+		await delay(2)
+		console.log(data);
+	}
+	
+<>
+		
+	...
+		
+	{isSubmitting && <div>Loading...</div>}
+	<input disabled={isSubmitting} type="submit" value="Submit" />	
+		
+	...
+		
+</>
 ```
 
 ---
+
