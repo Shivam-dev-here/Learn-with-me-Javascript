@@ -89,7 +89,6 @@ function App() {
 ```
 
 ---
-
 ## Throw Custom Server Error
 
 ```
@@ -109,3 +108,35 @@ const onSubmit = async (data) =>{
 	{errors.blocked && <div>{errors.blocked.message}</div>}
 </form>
 ```
+
+---
+# Posting Data inside Server
+
+1. Terminal 1: npm run dev
+2. Terminal 2: npm i express@4
+3. Create a file: Root/Backend/server.js
+
+#### Server.js
+
+```
+
+```
+
+4. Terminal 2: node .\backend\server.js
+
+#### App.jsx
+
+```
+
+```
+
+5. Terminal 2: npm i cors
+
+#### Server.js
+
+```
+import cors from "cors"
+app.use(cors())
+```
+
+5. Terminal 2: npm i body-parser

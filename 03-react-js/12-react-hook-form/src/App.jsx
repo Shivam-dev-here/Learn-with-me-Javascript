@@ -6,24 +6,38 @@ import './App.css'
 function App() {
   const { register, handleSubmit, setError, formState: { errors, isSubmitting } } = useForm();
 
-const delay = (d) =>{
-  return new Promise((resolve, reject)=>{
-    setTimeout(() => {
-      resolve()
-    }, d * 1000);
-  })
-}
+  const delay = (d) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve()
+      }, d * 1000);
+    })
+  }
 
-  const onSubmit = async (data) =>{
-    await delay(2)
-    console.log(data);
-    if(data.username !=="shivam"){
-      setError("myform", {message: "Credential Error"})
-    }
-    if(data.username === "hacker"){
-      setError("blocked", {message: "Invalid User"})
-    }
-  } 
+
+  // For Server Error
+
+
+  // const onSubmit = async (data) =>{
+  //   await delay(2)
+  //   console.log(data);
+  //   if(data.username !=="shivam"){
+  //     setError("myform", {message: "Credential Error"})
+  //   }
+  //   if(data.username === "hacker"){
+  //     setError("blocked", {message: "Invalid User"})
+  //   }
+  // } 
+
+
+  // For data post in server 
+
+
+  const onSubmit = async (data) => {
+    let r = await fetch("http://localhost:3000/", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(data) })
+    let res = await r.text()
+    console.log(data, res);
+  }
 
 
   return (
@@ -52,7 +66,7 @@ const delay = (d) =>{
 
 
     <>
-    {isSubmitting && <div>Loading...</div>}
+      {isSubmitting && <div>Loading...</div>}
       <div className="container">
 
         <form action="" onSubmit={handleSubmit(onSubmit)}>
