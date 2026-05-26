@@ -19,6 +19,10 @@ description below
 # Simple Error Display
 
 ```
+function App() {
+	 const onSubmit = data => console.log(data);	
+...
+	
 <input placeholder='username' type="text" {...register("username", { required:
 	 "true", minLength: 6, maxLength: 8 })} />
 	 {errors.username && <div>There is error</div>}
@@ -29,6 +33,10 @@ description below
 ## Standard Error Display
 
 ```
+function App() {
+	 const onSubmit = data => console.log(data);	
+...
+	
 <input placeholder='username' type="text" {...register("username", { required:
 	{value:true, message:"Required"}, minLength: {value:5, message: "minimum 
 	length is 5"}, maxLength: {value:8, message: "maximum length is 8"}})} />
@@ -45,5 +53,9 @@ description below
 - Also conditions are required to deal with network delay.
 
 - Solution: Disable Submission button temporarily & add timeout.
+
+```
+
+```
 
 ---
