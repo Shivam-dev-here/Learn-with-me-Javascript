@@ -38,3 +38,12 @@ description below
 
 
 ---
+
+## Submission problem
+
+- User often spam on submit button. creates multiple copies of same data.
+- Also conditions are required to deal with network delay.
+
+- Solution: Disable Submission button temporarily & add timeout.
+
+---
