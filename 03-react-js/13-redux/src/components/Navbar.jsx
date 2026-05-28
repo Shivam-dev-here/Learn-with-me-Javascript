@@ -5,7 +5,7 @@ const Navbar = () => {
     const count = useSelector(state => state.counter.value)
   return (
     <div>
-      I am Navbar, Count is {cou}
+      I am Navbar, Count is {count}
     </div>
   )
 }
