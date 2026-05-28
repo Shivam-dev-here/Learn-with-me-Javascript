@@ -7,3 +7,9 @@ description
 - Redux, let the state to be used, without prop dealing to all components or deep hierarchy.
 
 ---
+# Working
+
+- We update all to "Redux file".
+- All components communicate with redux.
+
+---
