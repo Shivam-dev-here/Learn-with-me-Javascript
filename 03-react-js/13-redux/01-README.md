@@ -13,3 +13,11 @@ description
 - All components communicate with redux.
 
 ---
+# Setup
+
+#### Terminal:
+
+1. npm install @reduxjs/toolkit
+2. npm run dev
+
+---
