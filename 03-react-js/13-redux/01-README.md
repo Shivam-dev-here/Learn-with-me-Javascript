@@ -23,50 +23,49 @@ description
 
 ---
 
+## Use Redux
+
 #### Main.js
 
 ```
 import store from './app/store'
-
 import { Provider } from 'react-redux'
-
-
-
-
-    <Provider store={store}>
-
-    <App />
-
-    </Provider>
+	
+...
+	
+<Provider store={store}>
+	<App />
+</Provider>
+	
+...
 ```
-
-
 #### Store.js
 
 ```
 import counterReducer from "./counter/counterSlice"
-
-    reducer: {
-
-    counter: counterReducer
-
-  }
+	
+...
+	
+reducer: {
+	counter: counterReducer
+}
 ```
 
 #### App.jsx
 
 ```
 import { useSelector, useDispatch } from 'react-redux'
-  const count = useSelector(state => state.counter.value) //take the count value herer
-  
-      <>
-
-    <div>
-
-      {count}
-
-    </div>
-
-    </>
-
+	
+...
+	
+const count = useSelector(state => state.counter.value) //Transport count val
+	
+...
+	
+<>
+	<div>
+		{count}
+	</div>
+</>
+	
 ```
