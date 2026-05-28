@@ -69,3 +69,12 @@ const count = useSelector(state => state.counter.value) //Transport count val
 </>
 	
 ```
+
+---
+
+# Other
+
+- Documentation  Redux [Click me](https://redux.js.org/tutorials/quick-start)
+
+---
+
