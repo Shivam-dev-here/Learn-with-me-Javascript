@@ -3,6 +3,8 @@ description
 ---
 # Why NEXT.JS
 
+- Website Next.js [Click me](https://nextjs.org/)
+
 - Include features of react and other with new.
 - Makes our task easy to be execute.
 
@@ -54,5 +56,12 @@ Root
 - Used for different different pages
 ###### 2. layout.js 
 - Sets structure for every pages. Ex: Navbar.js apply on every pages top
+
+---
+# URL
+
+1. /contact
+2. /about
+3. /
 
 ---
