@@ -27,5 +27,27 @@ description
 - `npm run dev`
 
 ---
+### File Structure Of Next.js
 
+### 1. App.js
 
+```
+Root
+│
+├── app
+│	├── about
+│	│   └── page.js
+│	├── contact
+│	│   └── page.js
+│	└── layout.js
+│
+└── components
+	└── Navbar.js
+```
+
+###### 1. app
+- Used for different different pages
+###### 2. layout.js 
+- Sets structure for every pages. Ex: Navbar.js apply on every pages top
+
+---
