@@ -6,6 +6,11 @@ description
 - Include features of react and other with new.
 - Makes our task easy to be execute.
 
+- Full Stack Solution.
+- File Based Routing.
+- Additional Features like router from next/navigation.
+- Optimized Rendering.
+
 ##### Types:
 
 - Page Base Routing: Old
