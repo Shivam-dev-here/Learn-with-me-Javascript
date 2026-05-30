@@ -3,7 +3,7 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      I am Home Page
+      I am About page, my new email is :"shivamdevhere@gamil.com"
     </div>
   )
 }
