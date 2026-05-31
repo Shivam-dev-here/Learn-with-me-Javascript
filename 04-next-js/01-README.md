@@ -18,3 +18,27 @@ description
 - Read: replace, prefetch, scroll.
 
 ---
+## Change title of webpage as pages changes
+
+- Paste this metadata from "Layout.js" to bottom of page with change.
+
+- Example: Root/app/about/page.js
+
+```
+import React from 'react'
+const About = () => {
+  return (
+    <div>
+      About
+    </div>
+  )
+} 
+export default About
+
+export const metadata = {
+  title: "Companies info",
+  description: "This page includes the information regrading company",
+};
+```
+
+---
