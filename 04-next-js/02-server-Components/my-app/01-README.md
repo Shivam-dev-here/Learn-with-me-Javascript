@@ -43,3 +43,11 @@ export default function Home() {
 - `console.log("You will found me at Terminal Console")`
 
 ---
+### Solution: B
+
+- Use a client side inside a server side.
+
+Client Side: "Root/components/Navebar.js"
+Server side: "Root/app/Page.js"
+
+---
