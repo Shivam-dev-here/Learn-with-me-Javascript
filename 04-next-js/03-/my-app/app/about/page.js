@@ -4,6 +4,9 @@ import Script from 'next/script'
 const About = () => {
   return (
     <>
+      <Script>
+        {` alert("Careful, Script tag on About Page")`}
+      </Script>
     <div>
       About
     </div>
