@@ -1,10 +1,13 @@
 import React from 'react'
+import Script from 'next/script'
 
 const About = () => {
   return (
+    <>
     <div>
       About
     </div>
+    </>
   )
 }
 

@@ -42,3 +42,26 @@ export const metadata = {
 ```
 
 ---
+## Script tag
+
+- Use js depending on pages
+
+- Example: Root/app/about/page.js
+
+```
+import Script from 'next/script'
+
+return (
+	<>
+		<Script>
+			{` alert("Careful, Script tag on About Page")`}
+		</Script>
+	</>
+)
+
+```
+
+- Documentation Script Tag [Click me](https://nextjs.org/docs/app/api-reference/components/script)
+- Read: src, onLoad, onError, onReady, Strategy is important
+
+---
