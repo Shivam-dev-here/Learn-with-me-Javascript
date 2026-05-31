@@ -9,3 +9,8 @@ const About = () => {
 }
 
 export default About
+
+export const metadata = {
+  title: "Companies info",
+  description: "This page includes the information regrading company",
+};
