@@ -10,7 +10,7 @@ description
 - The page will first load on server then compute as html and transfer to client
 
 ---
-### Solution
+### Solution : A
 
 1. Use "use client" at top
 
@@ -30,5 +30,16 @@ export default function Home() {
   );
 }
 ```
+
+---
+#### Client side Console
+
+- When we add "use client"
+- `console.log("You will found me at browser's Console")`
+
+#### Server side Console
+
+- When Next.js treats components as a server
+- `console.log("You will found me at Terminal Console")`
 
 ---

@@ -3,6 +3,8 @@ import { useState, useEFfect } from "react"
 export default function Home() {
 
   const [Count, setCount] = useState(0)
+
+  console.log("I am a console")
   return (
     <>
       <div>
