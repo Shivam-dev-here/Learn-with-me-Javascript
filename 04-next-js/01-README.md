@@ -14,4 +14,7 @@ description
 <Link href="/contact">Contact</Link>
 ```
 
+- Documentation Link [Click me](https://nextjs.org/docs/app/api-reference/components/link)
+- Read: replace, prefetch, scroll.
+
 ---
