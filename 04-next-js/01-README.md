@@ -65,3 +65,41 @@ return (
 - Read: src, onLoad, onError, onReady, Strategy is important
 
 ---
+## Image Component
+
+- Reduces the size of image while maintaining quality
+
+- Size is Original ==750kb==
+`<img src="/Shivam-dev-here-new.gif">` :  **750kb in size**
+
+- Size is ==0.2kb==
+
+```
+import Image from "next/image";
+<Image src="/Shivam-dev-here-new.gif" width={500} height={500} alt="Shivam-dev-here"></ Image>
+```
+
+- Also add at: `Root/next.config.mjs`
+- hostname: 'www.menucool.com' the website whose image is used in Image tag.
+
+```
+const nextConfig = {
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'example.com',
+				port: '',
+				search: '',
+			},
+		],
+		},
+	reactCompiler: true,
+};
+```
+
+- Documentation [Image in Next.js](https://nextjs.org/docs/app/api-reference/components/image)
+1. Quality
+2. Priority
+
+---
