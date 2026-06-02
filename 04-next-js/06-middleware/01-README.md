@@ -9,8 +9,10 @@ description
 	2. Response Function.
 	3. Next function
 
+- For below examples: Req before reaches "Root/app/about/page.js", it modifies the request. 
+
 ---
-## Example: 
+## Example: redirect-Middleware
 
 1. from /home we proceed to /about.
 2. But via redirect-Middleware we redirected back to /home
@@ -22,6 +24,19 @@ export function middleware(request){
 }
 export const config ={
 	matcher: '/about/:path*',
+}
+```
+
+---
+## Example: return message
+
+- stops after execution of first return
+- will see this message at /about
+
+```
+export function middleware(request){
+	return NextResponse.json({message: "A message from About page."})
+	return NextResponse.redirect(new URL('/', request.url))
 }
 ```
 
