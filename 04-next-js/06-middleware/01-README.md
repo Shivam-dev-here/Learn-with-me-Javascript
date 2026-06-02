@@ -12,6 +12,12 @@ description
 - For below examples: Req before reaches "Root/app/about/page.js", it modifies the request. 
 
 ---
+# Ways to Create Middleware Functions
+
+1. By Matching URL
+2. By If-else way
+
+---
 ## Example: redirect-Middleware
 
 1. from /home we proceed to /about.
