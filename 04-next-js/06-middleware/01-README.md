@@ -47,3 +47,10 @@ export function middleware(request){
 ```
 
 ---
+## Redirect VS Rewrite
+
+- Redirect: Sending a user from one URL to another automatically 
+
+- Rewrite: Showing content of another page at searched URL.
+
+---
