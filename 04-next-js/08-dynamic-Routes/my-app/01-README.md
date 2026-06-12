@@ -21,3 +21,8 @@ description
 
 1. Condition based slug route
 ---
+## Custom Design 404 Not-Found Page
+
+- `Root/app/not-found.js`
+
+---
