@@ -20,9 +20,17 @@ description
 - 3rd Commit
 
 1. Condition based slug route
+
 ---
 ## Custom Design 404 Not-Found Page
 
 - `Root/app/not-found.js`
+
+---
+## Custom Error
+
+1. `Root/app/blogpost/[slug]/page.js`
+	- `throw new Error("Error: Who creates error on error free sitr, Seriously?")`
+2. `Root/app/error.js`
 
 ---
