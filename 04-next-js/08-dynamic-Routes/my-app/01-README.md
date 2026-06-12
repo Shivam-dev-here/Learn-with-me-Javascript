@@ -34,3 +34,15 @@ description
 2. `Root/app/error.js`
 
 ---
+## Catching all Dynamic Routing 
+
+- URL: `http://localhost:3000/about/cpp/python/about/clear`
+
+- Output:
+
+1. Front-end: Also at Console   `["cpp","python","about","clear"]`
+2. Console Client:  
+	`Server  (4) ['cpp', 'python', 'about', 'clear']` 
+	`Server  (4) ['cpp', 'python', 'about', 'clear']`
+
+---
