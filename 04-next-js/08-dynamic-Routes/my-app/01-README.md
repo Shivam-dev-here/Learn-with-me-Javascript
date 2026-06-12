@@ -17,5 +17,7 @@ description
 - URL: `http://localhost:3000/blogpost/Dynamic-Route`
 - Output: `My Post: Dynamic-Route`
 
----
+- 3rd Commit
 
+1. Condition based slug route
+---
