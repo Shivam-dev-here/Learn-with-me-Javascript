@@ -1,1 +1,0 @@
-it is a  public file for public inside a public folder.
